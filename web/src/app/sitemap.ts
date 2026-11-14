@@ -1,26 +1,17 @@
 import type { MetadataRoute } from "next";
-import { getBills } from "@/features/bills/server/loaders/get-bills";
 import { env } from "@/lib/env";
+import { getOfficialRecords } from "@/features/official-records/server/repositories/official-records-repository";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = env.webUrl;
-
-  const bills = await getBills();
-
-  const billUrls = bills.map((bill) => ({
-    url: `${baseUrl}/bills/${bill.id}`,
-    lastModified: new Date(bill.updated_at),
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
-  }));
-
+export default function sitemap(): MetadataRoute.Sitemap {
+  const { minutes, manifest } = getOfficialRecords();
+  const lastModified = new Date(manifest.collectedAt);
   return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "daily" as const,
-      priority: 1,
-    },
-    ...billUrls,
+    { url: env.webUrl, lastModified, changeFrequency: "weekly", priority: 1 },
+    ...minutes.meetings.map((meeting) => ({
+      url: `${env.webUrl}/minutes/${meeting.id}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }

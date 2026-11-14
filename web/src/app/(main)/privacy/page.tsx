@@ -108,14 +108,18 @@ export default function PrivacyPage() {
             {siteConfig.operator.name} 個人情報保護管理責任者
           </LegalParagraph>
           <LegalParagraph>
-            <a
-              href={siteConfig.operator.contactUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-2"
-            >
-              {siteConfig.operator.contactUrl}
-            </a>
+            {siteConfig.operator.contactUrl ? (
+              <a
+                href={siteConfig.operator.contactUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-2"
+              >
+                {siteConfig.operator.contactUrl}
+              </a>
+            ) : (
+              "お問い合わせ窓口は準備中です。"
+            )}
           </LegalParagraph>
         </section>
       </Container>

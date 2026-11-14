@@ -93,16 +93,18 @@ export function About() {
                   <br />
                   ご意見や不具合等がございましたら党公式への連絡ではなく、
                   <br />
-                  開発者の
-                  <Link
-                    href={siteConfig.operator.contactUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="underline underline-offset-2 hover:opacity-70 transition-opacity"
-                  >
-                    {siteConfig.operator.name}
-                  </Link>
-                  にご連絡お願いします。
+                  {siteConfig.operator.contactUrl ? (
+                    <Link
+                      href={siteConfig.operator.contactUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline underline-offset-2"
+                    >
+                      {siteConfig.operator.name}にご連絡ください。
+                    </Link>
+                  ) : (
+                    "運営者・お問い合わせ窓口は準備中です。"
+                  )}
                 </p>
               </div>
             </div>

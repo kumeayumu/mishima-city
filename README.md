@@ -1,6 +1,12 @@
-# みらい議会ー福岡市版
+# みらい議会ー三島市版
 
 公開URL: （デプロイ後に更新）
+
+現在は2026年度（2026年4月1日〜2027年3月31日）の三島市公式資料を原文で掲載します。
+取得・更新方法と移行状況は[三島市版移行記録](docs/20261114_2035_三島市版2026年度移行.md)を参照してください。
+
+`pnpm sources:mishima` で公式資料を取得し、画面用スナップショットを更新します。
+更新時は `pnpm --filter @mirai-gikai/seed sources:mishima --refresh` を使用します。
 
 ## 注意事項
 
@@ -26,11 +32,11 @@
 【チームみらい（上流）】
   kawasaki/develop
        ↓ 良い更新があれば取り込む
-【このリポジトリ】bakumon1107/mirai-gikai-fukuoka-city
+【このリポジトリ】kumeayumu/mishima-city
   kawasaki/develop     ← 上流のコピー（コントリビューターは触らない）
   fukuoka-city/develop ← 福岡市版の開発ブランチ ★ PRの送り先はここ
        ↑ PR を送る
-【コントリビューター】your-name/mirai-gikai-fukuoka-city（Fork）
+【コントリビューター】your-name/mishima-city（Fork）
   feature/your-feature  ← ブランチ名は自由
 ```
 
@@ -42,8 +48,8 @@
 
 ```bash
 # 1. クローン
-git clone https://github.com/bakumon1107/mirai-gikai-fukuoka-city.git
-cd mirai-gikai-fukuoka-city
+git clone https://github.com/kumeayumu/mishima-city.git
+cd mishima-city
 
 # 2. 環境変数を設定
 cp .env.example .env
@@ -69,13 +75,13 @@ pnpm dev   # web(:3000) + admin(:3001)
 
 #### Step 1 — このリポジトリを Fork する
 
-GitHub 右上の「Fork」ボタンで自分のアカウントにコピーを作ります（`your-name/mirai-gikai-fukuoka-city`）。Fork 先があなたの作業場所になります。
+GitHub 右上の「Fork」ボタンで自分のアカウントにコピーを作ります（`your-name/mishima-city`）。Fork 先があなたの作業場所になります。
 
 #### Step 2 — Fork したリポジトリをクローンしてセットアップ
 
 ```bash
-git clone https://github.com/<your-name>/mirai-gikai-fukuoka-city.git
-cd mirai-gikai-fukuoka-city
+git clone https://github.com/<your-name>/mishima-city.git
+cd mishima-city
 cp .env.example .env
 pnpm install
 npx supabase start && pnpm db:reset
@@ -102,7 +108,7 @@ push すると GitHub 上に「Compare & pull request」ボタンが表示され
 
 | 項目 | 値 |
 |------|-----|
-| base repository | `bakumon1107/mirai-gikai-fukuoka-city` |
+| base repository | `kumeayumu/mishima-city` |
 | base branch | `fukuoka-city/develop` |
 
 > [!TIP]

@@ -35,16 +35,20 @@ const faqs: FaqItem[] = [
         いいえ、{siteConfig.siteName}
         はチームみらいの公式サービスではありません。「チームみらい」が開発・公開した「みらい議会」をベースに、有志が独自に運営している非公式サービスです。
         <br />
-        ご意見・不具合等は、チームみらい公式ではなく、開発者（
-        <Link
-          href={siteConfig.operator.contactUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="underline underline-offset-2"
-        >
-          {siteConfig.operator.name}
-        </Link>
-        ）にご連絡ください。
+        ご意見・不具合等の窓口：
+        {siteConfig.operator.contactUrl ? (
+          <Link
+            href={siteConfig.operator.contactUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-2"
+          >
+            {siteConfig.operator.name}
+          </Link>
+        ) : (
+          <span>運営者・連絡先は準備中です</span>
+        )}
+        。
       </>
     ),
   },
@@ -85,16 +89,20 @@ const faqs: FaqItem[] = [
     question: "不具合や意見はどこに連絡すればいいですか？",
     answer: (
       <>
-        開発者（
-        <Link
-          href={siteConfig.operator.contactUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="underline underline-offset-2"
-        >
-          {siteConfig.operator.name}
-        </Link>
-        ）までご連絡ください。なお、チームみらいの公式窓口への連絡はご遠慮ください。
+        お問い合わせ窓口：
+        {siteConfig.operator.contactUrl ? (
+          <Link
+            href={siteConfig.operator.contactUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-2"
+          >
+            {siteConfig.operator.name}
+          </Link>
+        ) : (
+          <span>運営者・連絡先は準備中です</span>
+        )}
+        。なお、チームみらいの公式窓口への連絡はご遠慮ください。
       </>
     ),
   },

@@ -7,12 +7,14 @@
     "seed": "tsx main/run.ts",
     "seed:csv": "tsx csv/import-csv.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "sources:mishima": "tsx mishima/collect-sources.ts"
   },
   "dependencies": {
     "@mirai-gikai/supabase": "workspace:*",
     "@supabase/supabase-js": "^2.57.0",
-    "csv-parse": "^6.1.0"
+    "csv-parse": "^6.1.0",
+    "parse5": "7.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.5.5",

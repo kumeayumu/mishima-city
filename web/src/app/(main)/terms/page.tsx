@@ -92,9 +92,15 @@ export default function TermsPage() {
         <section className="space-y-4">
           <LegalSectionTitle>第6条（準拠法・管轄）</LegalSectionTitle>
           <LegalParagraph>
-            本規約は日本法に準拠し、本サービスに関連して生じる一切の紛争については、
-            {siteConfig.operator.jurisdiction}
-            を第一審の専属的合意管轄裁判所とします。
+            {siteConfig.operator.jurisdiction ? (
+              <>
+                本規約は日本法に準拠し、本サービスに関連して生じる紛争については、
+                {siteConfig.operator.jurisdiction}
+                を第一審の専属的合意管轄裁判所とします。
+              </>
+            ) : (
+              "準拠法・管轄の詳細は準備中です。"
+            )}
           </LegalParagraph>
         </section>
       </Container>

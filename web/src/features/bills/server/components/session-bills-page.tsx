@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site.config";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import type { CouncilSession } from "@/features/council-sessions/shared/types";
@@ -80,7 +81,7 @@ export function SessionBillsPage({ session, bills }: SessionBillsPageProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1"
           >
-            福岡市議会情報へ
+            {siteConfig.councilName}情報へ
             <ExternalLink className="h-3 w-3" />
           </a>
         </div>

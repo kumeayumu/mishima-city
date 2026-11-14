@@ -18,34 +18,25 @@ const lexendGiga = Lexend_Giga({
   weight: ["400", "500", "700", "800", "900"],
 });
 
-const ogImage = {
-  url: "/ogp.jpg",
-  width: 1200,
-  height: 630,
-  alt: `${siteConfig.siteName}のOGPイメージ`,
-};
-
 export const metadata: Metadata = {
   metadataBase: new URL(env.webUrl),
   title: siteConfig.siteName,
   description: siteConfig.siteDescription,
   keywords: [...siteConfig.keywords],
   icons: {
-    icon: "/icons/pwa/icon_fukuoka.svg",
-    apple: "/icons/pwa/icon_fukuoka.svg",
+    icon: "/icons/pwa/icon_mishima.svg",
+    apple: "/icons/pwa/icon_mishima.svg",
   },
   manifest: "/manifest.json",
   openGraph: {
     title: siteConfig.siteName,
     description: siteConfig.siteDescription,
-    images: [ogImage],
     siteName: siteConfig.siteName,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: siteConfig.siteName,
     description: siteConfig.siteDescription,
-    images: [ogImage.url],
   },
   robots: {
     index: true,
@@ -57,9 +48,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "fzIXRquRrvSqvoV072nopGQ-wiWv8dSpJSwPwIMAQvs",
   },
 };
 
