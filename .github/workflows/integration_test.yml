@@ -1,8 +1,7 @@
 name: Integration Tests
 
 on:
-  push:
-    branches: [fukuoka-city/develop]
+  workflow_dispatch:
 
 jobs:
   integration-test:

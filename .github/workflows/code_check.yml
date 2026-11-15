@@ -2,9 +2,9 @@ name: Code Check
 
 on:
   push:
-    branches: [kawasaki/develop, fukuoka-city/develop]
+    branches: [main]
   pull_request:
-    branches: [kawasaki/develop, fukuoka-city/develop]
+    branches: [main]
 
 jobs:
   lint-and-typecheck:
@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "24"
+          node-version-file: ".node-version"
           cache: "pnpm"
 
       - name: Install dependencies
@@ -36,6 +36,11 @@ jobs:
 
       - name: Run Test with Coverage
         run: pnpm run test:coverage
+
+      - name: Build public archive without database credentials
+        run: pnpm --filter web build
+        env:
+          NEXT_PUBLIC_WEB_URL: https://mishima-preview.example.com
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de # v5

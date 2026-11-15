@@ -3,8 +3,8 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    root: fileURLToPath(new URL(".", import.meta.url)),
-    include: ["utils/*.test.ts"],
+    root: fileURLToPath(new URL("..", import.meta.url)),
+    include: ["windows/utils/*.test.ts", "git/*.test.ts"],
     environment: "node",
   },
 });

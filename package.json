@@ -19,7 +19,7 @@
     "typecheck": "pnpm -r run typecheck",
     "lint": "biome format . && biome lint .",
     "lint:fix": "biome format --write . && biome lint --write .",
-    "postinstall": "npx simple-git-hooks",
+    "postinstall": "node scripts/git/install-hooks.cjs",
     "sources:mishima": "pnpm --filter @mirai-gikai/seed sources:mishima",
     "dev:web": "dotenv -e .env -- pnpm --filter web dev",
     "build:web": "dotenv -e .env -- pnpm --filter web build",
@@ -37,7 +37,7 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "pnpm run lint:fix"
+    "*.{js,jsx,ts,tsx,cjs,mts}": "biome check --write"
   },
   "engines": {
     "node": "24.x",

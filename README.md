@@ -11,7 +11,7 @@
 - 2026年度（2026年4月1日〜2027年3月31日）の公式議案62件・会議録7日分を同梱しています。
 - 公開トップと会議録は同梱JSONを使用し、ローカルDBなしで開発表示できます。
 - 管理画面・DB取り込み・AI解説・本番公開の整備は未完了です。
-- 本番ビルドには、停止対象の委員会ページでDB取得が実行される未解決の課題があります。
+- DB・AI機能と旧地域固有ルートは非公開の`_legacy`へ保持し、公開アーカイブのビルドから分離しています。
 
 ## Windowsでの起動
 
@@ -59,7 +59,7 @@ setupは公式Node.jsアーカイブのSHA-256を検証し、Node.jsとpnpmをGi
 | .\mishima.cmd typecheck | 全ワークスペースの型チェック |
 | .\mishima.cmd test | ツールの単体テストと全ワークスペースのテスト |
 | .\mishima.cmd test:coverage | ツールの単体テストと公開アプリのカバレッジ付きテスト |
-| .\mishima.cmd build | 公開サイトの本番ビルド（現時点ではDB依存の課題あり） |
+| .\mishima.cmd build | 公開アーカイブの本番ビルド（DB不要） |
 
 Linux/macOS・CIではNode.js 24系とpackage.jsonに指定したpnpmを使い、通常のpnpmコマンドを実行してください。
 Windows用コマンドはあくまでこのリポジトリ専用です。
@@ -97,3 +97,7 @@ GitHub： https://github.com/kumeayumu/mishima-city
 GNU AGPL v3の[LICENSE](LICENSE)を保持しています。公開時には利用者が対応するソースコードを取得できる案内を維持します。
 
 [更新前のREADME](docs/20261115_0010_README更新前の記録.md)は履歴資料として保存しています。
+
+## Vercelテスト公開の準備
+
+[DB分離・CI・Vercel設定チェックリスト](docs/20261115_1800_Vercelテスト公開準備.md)を参照してください。公開操作はまだ行っていません。
