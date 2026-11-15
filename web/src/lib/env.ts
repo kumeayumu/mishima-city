@@ -1,3 +1,5 @@
+import { resolveWebUrl } from "./utils/resolve-web-url";
+
 /**
  * 環境変数の設定
  * アプリケーション全体で使用する環境変数を一元管理
@@ -14,7 +16,11 @@ if (Number.isNaN(chatDailyCostLimitUsd) || chatDailyCostLimitUsd <= 0) {
 }
 
 export const env = {
-  webUrl: process.env.NEXT_PUBLIC_WEB_URL || "http://localhost:3002",
+  webUrl: resolveWebUrl({
+    explicitUrl: process.env.NEXT_PUBLIC_WEB_URL,
+    vercel: process.env.VERCEL,
+    deploymentHostname: process.env.VERCEL_URL,
+  }),
   adminUrl: process.env.ADMIN_URL || "http://localhost:3001",
   get supabaseUrl() {
     const value = process.env.NEXT_PUBLIC_SUPABASE_URL;

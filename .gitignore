@@ -20,3 +20,6 @@ docs/fukuoka/sample/
 
 # Project-local Windows Node.js/pnpm and their downloads
 /.tools/
+
+# Local Vercel project binding (no Git integration)
+.vercel/
