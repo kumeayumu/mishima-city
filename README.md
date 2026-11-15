@@ -1,204 +1,99 @@
-# みらい議会ー三島市版
+# みらい議会・三島市版
 
-公開URL: （デプロイ後に更新）
+三島市議会の議案・議決結果・会議録を、公式資料への出典付きで確認する非公式サイトです。
+チームみらいの「みらい議会」をもとに、福岡市版からForkして開発しています。
 
-現在は2026年度（2026年4月1日〜2027年3月31日）の三島市公式資料を原文で掲載します。
-取得・更新方法と移行状況は[三島市版移行記録](docs/20261114_2035_三島市版2026年度移行.md)を参照してください。
+## 現在の開発状態
 
-`pnpm sources:mishima` で公式資料を取得し、画面用スナップショットを更新します。
-更新時は `pnpm --filter @mirai-gikai/seed sources:mishima --refresh` を使用します。
+- 作業フォルダー：F:\mishimacity\mirai-gikai-mishima-migration
+- 作業ブランチ：mishima-migration。PR #1はmain向けで、未マージです。
+- 元のF:\mishimacity\mishima-city（fukuoka-city/develop）は変更せず保持します。
+- 2026年度（2026年4月1日〜2027年3月31日）の公式議案62件・会議録7日分を同梱しています。
+- 公開トップと会議録は同梱JSONを使用し、ローカルDBなしで開発表示できます。
+- 管理画面・DB取り込み・AI解説・本番公開の整備は未完了です。
+- 本番ビルドには、停止対象の委員会ページでDB取得が実行される未解決の課題があります。
 
-## 注意事項
+## Windowsでの起動
 
-- このプロジェクトは「チームみらい」が開発・運営している「みらい議会」をForkして開発したものとなります。
-- **非公式**ですので、ここでの不具合や気になる点についての問い合わせは
-  党公式ではなく開発担当者にご連絡ください。
+既存のNode.js 26や他のプロジェクトを変えず、このフォルダー内だけでNode.js 24.22.3・pnpm 10.34.9を使います。
+初回の準備はインターネット接続と既存のNode.jsが必要です。このPCではNode.js 26を準備処理に使用できます。
 
-## 他地方議会向けForkガイド
+PowerShellで次の順に実行してください。
 
-- 他の市議会・県議会等のバージョンを作成したい場合は、
-  以下のドキュメントを参考にすると早いと思います
-  [fork手順](docs/kawasaki/20260304_1000_別地域向けfork手順.md)
+~~~powershell
+Set-Location F:\mishimacity\mirai-gikai-mishima-migration
+.\mishima.cmd setup
+.\mishima.cmd info
+.\mishima.cmd dev
+~~~
 
----
+「Ready」が表示されたら **http://localhost:3002/** をブラウザで開きます。
+終了はターミナルでCtrl+Cです。2回目以降はこのフォルダーで次の1行だけです。
 
-## コントリビューション
+~~~powershell
+.\mishima.cmd dev
+~~~
 
-### このリポジトリの構造
+setupは公式Node.jsアーカイブのSHA-256を検証し、Node.jsとpnpmをGit管理外の.toolsに配置します。
+一時的なnpmキャッシュには依存しません。WindowsのPATH・レジストリ・PowerShell実行ポリシー・グローバルnpm設定は変更しません。
+.envが存在しない場合だけ.env.exampleから作成し、既存の.envは上書きしません。DB初期化やseed投入は行いません。
 
-このリポジトリはチームみらいが開発する「みらい議会」をベースにした **Fork（派生版）** です。
+通常のnodeコマンドが26系のままでも正常です。プロジェクト用のバージョンは次で確認します。
 
-```
-【チームみらい（上流）】
-  kawasaki/develop
-       ↓ 良い更新があれば取り込む
-【このリポジトリ】kumeayumu/mishima-city
-  kawasaki/develop     ← 上流のコピー（コントリビューターは触らない）
-  fukuoka-city/develop ← 福岡市版の開発ブランチ ★ PRの送り先はここ
-       ↑ PR を送る
-【コントリビューター】your-name/mishima-city（Fork）
-  feature/your-feature  ← ブランチ名は自由
-```
+~~~powershell
+.\mishima.cmd node --version
+.\mishima.cmd pnpm --version
+~~~
 
-**`kawasaki/develop` はチームみらいの更新を取り込む専用レーンです。コントリビューターは `fukuoka-city/develop` だけ意識してください。**
+詳しくは[Windowsローカル開発手順](docs/20261115_0015_Windowsローカル開発手順.md)を参照してください。
 
-### ローカル環境のセットアップ
+## コマンド
 
-**前提条件**: Node.js 20+ / pnpm 9+ / Docker
+| Windowsでのコマンド | 内容 |
+|---|---|
+| .\mishima.cmd setup | 専用ツール・依存関係・未作成時の.envを準備 |
+| .\mishima.cmd info | プロジェクト専用のNode.js・pnpmを確認 |
+| .\mishima.cmd dev | 公開サイトのみ起動（3002番、DBなしで表示可能） |
+| .\mishima.cmd dev:all | 既存の全開発サーバーを起動。管理画面はDB設定が必要 |
+| .\mishima.cmd lint | Biomeの書式・lint確認 |
+| .\mishima.cmd typecheck | 全ワークスペースの型チェック |
+| .\mishima.cmd test | ツールの単体テストと全ワークスペースのテスト |
+| .\mishima.cmd test:coverage | ツールの単体テストと公開アプリのカバレッジ付きテスト |
+| .\mishima.cmd build | 公開サイトの本番ビルド（現時点ではDB依存の課題あり） |
 
-```bash
-# 1. クローン
-git clone https://github.com/kumeayumu/mishima-city.git
-cd mishima-city
+Linux/macOS・CIではNode.js 24系とpackage.jsonに指定したpnpmを使い、通常のpnpmコマンドを実行してください。
+Windows用コマンドはあくまでこのリポジトリ専用です。
 
-# 2. 環境変数を設定
-cp .env.example .env
+## データとDBの扱い
 
-# 3. パッケージインストール
-pnpm install
+原文アーカイブはweb/src/features/official-records/server/data/2026にあります。
+[取得・更新の記録](docs/20261114_2035_三島市版2026年度移行.md)を参照してください。
 
-# 4. Supabase 起動 + DB 初期化
-npx supabase start
-pnpm db:reset
+管理画面・DB機能を検証する段階でDocker DesktopとSupabase CLIを別途準備します。
+現在のseedには福岡市向けデータが残っています。DBの初期化・リセット・seedは、内容と対象を確認して明示的に許可された場合だけ実行します。
+AI生成の要約等をDBに登録する前には、生成内容を提示してユーザー確認を得ます。
 
-# 5. 開発サーバー起動
-pnpm dev   # web(:3000) + admin(:3001)
-```
+## 開発・PR
 
-開発用 Admin アカウント: `admin@example.com` / `admin123456`
+- メインの作業ディレクトリを直接変更せず、git worktreeで作業します。
+- PR #1の追加作業は既存のmishima-migration worktreeで続けます。
+- PR先はmainです。旧福岡市版・川崎市版のブランチへ誤って送らないでください。
+- PR #1は未マージです。mainを基点に別の作業を始める場合、三島市版の変更がまだ含まれない点に注意してください。
+- コミット前にlint・型チェック・テスト・Codexレビューを実行します。
+- ユーザーの指示なしにPRをマージしません。
 
-> [!NOTE]
-> `pnpm db:reset` でスキーマとサンプルデータが投入されますが、**実際の福岡市議会データ（議案・一般質問・予算・記者会見等）は含まれません**。
-> UI やロジックの開発は空データのまま行えますが、実データを使った動作確認が必要な場合はメンテナーにご連絡ください。
+コードの構成・詳細な作業規則は[AGENTS.md](AGENTS.md)を参照してください。
+GitHub： https://github.com/kumeayumu/mishima-city
 
-### 開発フロー
+## Fork手順・上流への帰属
 
-#### Step 1 — このリポジトリを Fork する
+地方版の作成は、READMEから参照している[別地域向けFork手順書](docs/kawasaki/20260304_1000_別地域向けfork手順.md)を基準にします。
+同資料と[旧ローカル環境起動手順](docs/kawasaki/20260219_1000_ローカル環境起動手順.md)には、Mac向けコマンド・3000番ポート・Node.js 20以上等の古い記述があります。
+この作業フォルダーのWindows起動には本READMEとWindows手順書を優先してください。
 
-GitHub 右上の「Fork」ボタンで自分のアカウントにコピーを作ります（`your-name/mishima-city`）。Fork 先があなたの作業場所になります。
+上流： https://github.com/team-mirai-volunteer/mirai-gikai
+福岡市版： https://github.com/bakumon1107/mirai-gikai-fukuoka-city
+本サイトはチームみらいの公式サービスではありません。
+GNU AGPL v3の[LICENSE](LICENSE)を保持しています。公開時には利用者が対応するソースコードを取得できる案内を維持します。
 
-#### Step 2 — Fork したリポジトリをクローンしてセットアップ
-
-```bash
-git clone https://github.com/<your-name>/mishima-city.git
-cd mishima-city
-cp .env.example .env
-pnpm install
-npx supabase start && pnpm db:reset
-```
-
-#### Step 3 — 作業ブランチを作って実装
-
-```bash
-git checkout -b feature/your-feature-name   # ブランチ名は自由
-# 実装する
-```
-
-#### Step 4 — 品質チェックを通してから push
-
-```bash
-pnpm lint && pnpm typecheck && pnpm test  # 全て通ること
-git push origin feature/your-feature-name
-```
-
-#### Step 5 — PR を作成する
-
-push すると GitHub 上に「Compare & pull request」ボタンが表示されます。
-それを押して、送り先を以下のように設定して PR を作成してください。
-
-| 項目 | 値 |
-|------|-----|
-| base repository | `kumeayumu/mishima-city` |
-| base branch | `fukuoka-city/develop` |
-
-> [!TIP]
-> 「Compare & pull request」ボタンを使うと base repository が自動で上記に設定されます。自分の Fork 内で PR を確認してから送ることも可能です。
-
-> PR がマージされると、GitHub の Contributors リストに自動で名前が掲載されます 🎉
-
-### よく使うコマンド
-
-| コマンド | 内容 |
-|---------|------|
-| `pnpm dev` | web + admin 同時起動 |
-| `pnpm test` | 全テスト実行 |
-| `pnpm lint` | Biome フォーマット + Lint |
-| `pnpm typecheck` | TypeScript 型チェック |
-| `pnpm db:migrate` | マイグレーション実行 + 型ファイル更新 |
-| `pnpm db:types:gen` | Supabase 型定義を再生成 |
-
-### プロジェクト構成
-
-```
-web/src/
-├── app/            # Next.js ルーティング
-├── components/     # 共通UIコンポーネント
-├── features/       # 機能別モジュール（bills / budget / general-questions / press-conferences 等）
-└── lib/            # 共通ユーティリティ
-
-admin/src/          # データ管理・AI生成等の管理画面
-
-packages/
-├── supabase/       # Supabase クライアント・型定義
-└── seed/           # 初期データ投入スクリプト
-
-supabase/migrations/ # DB マイグレーションファイル
-docs/fukuoka/        # 設計ドキュメント
-```
-
-### 関連ドキュメント
-
-- [CLAUDE.md](CLAUDE.md) — AI（Claude Code）で開発する場合のルール
-
----
-
-# みらい議会
-
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/team-mirai-volunteer/mirai-gikai)
-[![codecov](https://codecov.io/gh/team-mirai/mirai-gikai/branch/develop/graph/badge.svg)](https://codecov.io/gh/team-mirai/mirai-gikai)
-
-## セットアップ
-
-```bash
-# Supabaseの起動
-npx supabase start
-
-# 環境変数の設定（必要に応じて.envの内容を変更してください）
-cp .env.example .env
-
-# パッケージインストール
-pnpm install
-
-# SupabaseのDB初期化, 開発用シードデータのセットアップ
-pnpm db:reset
-
-# サーバー起動
-pnpm dev
-```
-
-## マイグレーション
-
-```bash
-# マイグレーションファイル生成
-npx supabase migration new マイグレーション名
-
-# マイグレーション実行 & 型ファイル更新
-pnpm db:migrate
-```
-
-## Adminユーザーの作成
-
-1. Supabase Studio上で Authentication > Add User からユーザーを作成
-2. Supabase Studio上で以下のSQLを実行
-
-```sql
-UPDATE auth.users
-SET raw_app_meta_data = raw_app_meta_data || '{"roles": ["admin"]}'::jsonb
-WHERE email = '<1で作成したユーザーのemail>';
-```
-
-> [!NOTE]
-> 開発環境では、seedデータによって、`email: admin@example.com, password: admin123456` のAdminユーザーが作成されます。
-
-
-
+[更新前のREADME](docs/20261115_0010_README更新前の記録.md)は履歴資料として保存しています。

@@ -24,7 +24,7 @@ Codex CLI の `codex review` コマンドで、現在の変更に対するコー
 
 ```bash
 git branch --show-current
-git diff --stat fukuoka-city/develop...HEAD
+git diff --stat origin/main...HEAD
 ```
 
 変更がない場合はユーザーに通知して終了。
@@ -35,10 +35,10 @@ git diff --stat fukuoka-city/develop...HEAD
 
 ```bash
 # 引数なしの場合
-codex review --base fukuoka-city/develop
+codex review --base origin/main
 
 # 引数ありの場合（例: "セキュリティ面を重点的にチェック"）
-codex review --base fukuoka-city/develop "{ユーザーの指示}"
+codex review --base origin/main "{ユーザーの指示}"
 ```
 
 コマンドのタイムアウトは5分（300000ms）に設定する。
@@ -49,6 +49,6 @@ Codex の出力をそのままユーザーに表示する。
 
 ## 注意事項
 
-- `codex` CLI がインストール済みであること（`/opt/homebrew/bin/codex`）
-- レビュー対象はデフォルトで `fukuoka-city/develop` ブランチとの差分
+- Codex CLIが実行可能であること。Windowsでは実際に利用可能なcodex.exeを使用する。
+- レビュー対象はデフォルトで `origin/main` ブランチとの差分
 - `--base` オプションで比較対象を変更可能

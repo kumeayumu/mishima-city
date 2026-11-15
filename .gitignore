@@ -17,3 +17,6 @@ docs/fukuoka/sample/
 .claude/settings.local.json
 # Downloaded official source archives (regenerate with sources:mishima)
 /artifacts/mishima/
+
+# Project-local Windows Node.js/pnpm and their downloads
+/.tools/

@@ -3,36 +3,42 @@
 ## 必須ルール
 
 ### Worktree必須
-変更作業は、**必ず git worktree を作成してから開始すること**。メインのリポジトリディレクトリでは直接変更を行わない。
+変更作業は必ずgit worktreeで行い、元のF:\mishimacity\mishima-cityを直接変更しないこと。
+現在の作業先はF:\mishimacity\mirai-gikai-mishima-migration、ブランチはmishima-migration。
+PR #1の追加作業はこの既存worktreeを使用する。PR #1はmain向けで未マージ。
 
-```bash
-# 1. worktreeを作成
-git worktree add ../mirai-gikai-<branch-name> -b <branch-name>
+新しい作業用worktreeが必要な場合のPowerShell例：
 
-# 2. settings.local.jsonをコピー（権限設定のため必須）
-mkdir -p ../mirai-gikai-<branch-name>/.claude
-cp .claude/settings.local.json ../mirai-gikai-<branch-name>/.claude/
+~~~powershell
+git worktree add ../mirai-gikai-<task-name> -b <task-name> mishima-migration
+if (Test-Path .env) { Copy-Item -LiteralPath .env -Destination ../mirai-gikai-<task-name>/.env }
+if (Test-Path .claude/settings.local.json) {
+  New-Item -ItemType Directory -Path ../mirai-gikai-<task-name>/.claude -Force
+  Copy-Item -LiteralPath .claude/settings.local.json -Destination ../mirai-gikai-<task-name>/.claude/
+}
+Set-Location ../mirai-gikai-<task-name>
+.\mishima.cmd setup
+~~~
 
-# 3. .envをコピー（環境変数の引き継ぎ）
-cp .env ../mirai-gikai-<branch-name>/
+- mainにはPR #1が未マージのため、三島市版の変更がまだ含まれない。作業の基点を確認すること。
+- 存在しない.envやsettings.local.jsonを無理にコピーせず、秘密情報や権限設定を捏造しないこと。
+- Node.js 24.22.3・pnpm 10.34.9は.toolsに固定し、mishima.cmd経由で使う。既存Node.js 26やPC全体のPATHを変更しない。
+- PC全体への設定変更が必要な場合は、他プロジェクトへの影響を説明して実行前に確認を得ること。
+- 議案62件・会議録7日分を、環境整備のために削除・置換・再収集しないこと。
+- ユーザーの明示的な指示なしにPRをマージしない。DB初期化・リセット・seed投入も行わない。
 
-# 4. 依存パッケージをインストール
-cd ../mirai-gikai-<branch-name> && pnpm install --frozen-lockfile
-```
-
-- **目的**: fukuoka-city/developブランチを常にクリーンに保ち、作業の分離と並列作業を容易にする
 
 ### 実装完了後は即PR作成
 実装完了後は「コミットしますか？」等の確認を挟まず、コミット → push → PR作成まで一気に進めること。ユーザーへの確認は不要。
 
-**ベースブランチは必ず `fukuoka-city/develop`**。`kawasaki/develop` や `main` へのPRは出さないこと。
+**三島市版のPR先はユーザー指定に従い `main`**。旧福岡市版・川崎市版の開発ブランチへ誤って送らないこと。
 ```bash
-gh pr create --base fukuoka-city/develop ...
+gh pr create --base main ...
 ```
 
 ### Codexレビュー必須
 実装完了後（コミット前）に、必ず `/review-codex` スキルを実行してCodex CLIによるコードレビューを受けること。指摘があれば修正してからコミットする。
-Codexレビューを通過したら、ユーザーに確認せずそのままPR作成まで一気に進めること（push → `gh pr create --base fukuoka-city/develop`）。
+Codexレビューを通過したら、ユーザーに確認せずそのままPR作成まで一気に進めること（push → `gh pr create --base main`）。
 
 ### 並列PR作成
 複数の独立したPRを作成する場合は `/parallel-pr` スキルを使用すること。
@@ -83,8 +89,8 @@ src/features/{feature}/
 Repository レイヤーの詳細は [docs/repository-layer.md](docs/repository-layer.md) を参照。
 
 ## Build, Test, and Development Commands
-- 依存導入は `pnpm install`、全てのスクリプトは pnpm 経由で実行します。
-- `pnpm dev` は `.env` を共有しつつ `web`・`admin`・各パッケージの dev サーバーを並列起動します。
+- Windowsの依存導入は `.\mishima.cmd setup`。各コマンドは `.\mishima.cmd lint`・`typecheck`・`test` 等で固定版のpnpm経由で実行します。
+- Windowsの通常起動は `.\mishima.cmd dev`（公開サイト3002番のみ、DB不要）。`.\mishima.cmd dev:all` は既存の全サーバー起動で、管理画面3001番の動作にはDB設定が必要です。
 - `pnpm test` でワークスペース横断の Vitest を実行。局所実行は `pnpm --filter web test` や `test:watch` を利用します。
 - 品質ゲートとして `pnpm lint`（Biome format+lint）と `pnpm typecheck` を PR 前に通過させます。
 - DB 関連は `pnpm db:reset`、`pnpm db:migrate`、`pnpm db:types:gen`、`pnpm seed` を用途に応じて組み合わせます。
@@ -131,7 +137,7 @@ Repository レイヤーの詳細は [docs/repository-layer.md](docs/repository-l
      ```
 
 ## Supabase & Environment Notes
-- ローカル開発前に `npx supabase start` を実行し、`.env.example` を `.env` にコピーして値を整えます。
+- 公開アーカイブの開発表示にはSupabase起動は不要です。DB機能の作業に進む場合だけ、許可と対象を確認してDocker・Supabaseを準備します。既存.envは上書きしません。
 - スキーマ変更時は `supabase/migrations` のマイグレーションと `packages/supabase/types/supabase.types.ts` の再生成ファイルをセットでコミットします。
 - `pnpm seed` は `admin@example.com / admin123456` を含む検証データを投入するため、開発用途に限定してください。
 - **RLSとアクセスパターン**: マイグレーションでは必ず `alter table <テーブル名> enable row level security;` を記述してRLSを有効化すること。ただし **ポリシーは定義しない**（デフォルト全拒否）。データアクセスはすべて `createAdminClient()`（Service Role Key）経由で行い、認可ロジックはアプリケーション層（Server Actions / Loaders）で実装する。
