@@ -1,5 +1,10 @@
 import { HomePage } from "@/features/home/server/components/home-page";
+import type { BillSearchParams } from "@/features/official-records/shared/types/bill-search";
 
-export default function Home() {
-  return <HomePage />;
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<BillSearchParams>;
+}) {
+  return <HomePage searchParams={await searchParams} />;
 }

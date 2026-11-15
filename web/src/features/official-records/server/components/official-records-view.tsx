@@ -1,9 +1,32 @@
 import "server-only";
 import Link from "next/link";
+import type { BillSearchParams } from "../../shared/types/bill-search";
+import {
+  filterBillSessions,
+  parseBillSearchFilters,
+} from "../../shared/utils/bill-search";
 import { getOfficialRecords } from "../repositories/official-records-repository";
+import { BillSearchForm } from "./bill-search-form";
 
-export function OfficialRecordsView() {
+export function OfficialRecordsView({
+  searchParams = {},
+}: {
+  searchParams?: BillSearchParams;
+}) {
   const { bills, minutes, manifest } = getOfficialRecords();
+  const filters = parseBillSearchFilters(
+    searchParams,
+    bills.sessions.map((session) => session.sourceUrl)
+  );
+  const sessions = filterBillSessions(bills.sessions, filters);
+  const count = sessions.reduce(
+    (sum, session) => sum + session.bills.length,
+    0
+  );
+  const total = bills.sessions.reduce(
+    (sum, session) => sum + session.bills.length,
+    0
+  );
   return (
     <div className="space-y-10">
       <section className="space-y-3">
@@ -28,7 +51,13 @@ export function OfficialRecordsView() {
         >
           議案・議決結果
         </h2>
-        {bills.sessions.map((session) => (
+        <BillSearchForm
+          filters={filters}
+          sessions={bills.sessions}
+          count={count}
+          total={total}
+        />
+        {sessions.map((session) => (
           <section key={session.sourceUrl} className="space-y-3">
             <h3 className="font-bold text-mirai-text">{session.title}</h3>
             <a
