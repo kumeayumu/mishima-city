@@ -19,7 +19,7 @@ export async function OfficialMinuteView({ id }: { id: string }) {
         {meeting.name} {meeting.date}
       </h1>
       <p className="text-sm text-mirai-text-secondary">
-        公式会議録の原文です。AIによる要約は含みません。
+        会議録本文はこのサイトには掲載していません。全文は三島市議会の公式会議録検索サイトでご確認ください。
       </p>
       <a
         href={meeting.sourceUrl}
@@ -29,17 +29,6 @@ export async function OfficialMinuteView({ id }: { id: string }) {
       >
         公式の会議録を確認する
       </a>
-      {meeting.minutes.map((minute) => (
-        <section
-          key={minute.id}
-          className="space-y-3 border-t border-mirai-border pt-5"
-        >
-          <h2 className="font-bold text-mirai-text">{minute.title}</h2>
-          <p className="whitespace-pre-wrap break-words text-sm leading-relaxed text-mirai-text">
-            {minute.text}
-          </p>
-        </section>
-      ))}
     </Container>
   );
 }

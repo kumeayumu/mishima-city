@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
-import { env } from "@/lib/env";
 import { getOfficialRecords } from "@/features/official-records/server/repositories/official-records-repository";
+import { env } from "@/lib/env";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const { minutes, manifest } = getOfficialRecords();

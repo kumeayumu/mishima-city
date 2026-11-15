@@ -28,6 +28,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Audit production and development dependencies
+        run: pnpm audit
+
       - name: Run Biome lint & format check
         run: pnpm run lint
 
@@ -41,6 +44,17 @@ jobs:
         run: pnpm --filter web build
         env:
           NEXT_PUBLIC_WEB_URL: https://mishima-preview.example.com
+
+      - name: Check public pages in production mode
+        run: |
+          pnpm --filter web start --port 3002 --hostname 127.0.0.1 > /tmp/mishima-web.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:3002/ > /dev/null; then break; fi
+            sleep 1
+          done
+          pnpm test:public
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de # v5

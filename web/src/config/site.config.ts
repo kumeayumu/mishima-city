@@ -8,6 +8,7 @@ export const siteConfig = {
   siteDescription:
     "三島市議会の議案・議決結果と会議録を、公式資料への出典付きで確認できるプラットフォームです",
   cityName: "三島市",
+  sourceUrl: "https://github.com/kumeayumu/mishima-city/tree/mishima-migration",
   councilName: "三島市議会",
   keywords: [
     "みらい議会ー三島市版",
@@ -42,8 +43,8 @@ export const siteConfig = {
    * 利用規約や問い合わせ先に使用します。
    */
   operator: {
-    name: "運営者未設定" as string,
-    contactUrl: "" as string,
+    name: "久米歩" as string,
+    contactUrl: "mailto:kume@soma-wood.jp" as string,
     /** 利用規約の準拠法・管轄裁判所（第一審の専属的合意管轄） */
     jurisdiction: "" as string,
   },

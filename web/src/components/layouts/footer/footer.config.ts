@@ -57,7 +57,7 @@ export const policyLinks: FooterPolicyLink[] = [
   },
   {
     label: "ソースコード（GitHub）",
-    href: "https://github.com/kumeayumu/mishima-city",
+    href: siteConfig.sourceUrl,
     external: true,
   },
 ];

@@ -10,11 +10,8 @@ export default defineConfig({
     include: ["**/*.test.ts"],
     // テスト間のデータ干渉を防ぐためシーケンシャル実行
     pool: "forks",
-    poolOptions: {
-      forks: {
-        singleFork: true,
-      },
-    },
+    maxWorkers: 1,
+    fileParallelism: false,
     globalSetup: [path.resolve(testsDir, "setup.ts")],
     testTimeout: 30000,
   },

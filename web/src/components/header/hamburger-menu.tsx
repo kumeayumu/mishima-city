@@ -9,7 +9,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { RubyToggle } from "@/lib/rubyful";
 import { TextSizeToggle } from "@/lib/text-size";
 
 const NAV_LINKS = [
@@ -48,7 +47,6 @@ export function HamburgerMenu() {
             ))}
           </ul>
           <div className="pt-3 mt-3 border-t border-mirai-border flex flex-col gap-3">
-            <RubyToggle />
             <TextSizeToggle />
           </div>
         </nav>

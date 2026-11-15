@@ -14,7 +14,7 @@ export function OfficialRecordsView() {
           対象期間：2026年4月1日〜2027年3月31日。
           {manifest.collectedAt.slice(0, 10)}
           に整理した公開資料を掲載しています。
-          議案の件名・議決結果と会議録の原文を確認できます。
+          議案の件名・議決結果と、公式会議録へのリンクを確認できます。
           AIによる要約・評価は含みません。
         </p>
         <p className="text-sm font-bold text-mirai-text">
@@ -84,7 +84,7 @@ export function OfficialRecordsView() {
           会議録
         </h2>
         <p className="text-sm text-mirai-text-secondary">
-          会議録は公開されたものから掲載しています。
+          会議録は開催日と公式サイトへのリンクを案内しています。本文は転載していません。
         </p>
         <ul className="divide-y divide-mirai-border">
           {minutes.meetings.map((meeting) => (
