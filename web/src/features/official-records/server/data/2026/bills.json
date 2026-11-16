@@ -1,0 +1,773 @@
+{
+  "fiscalYear": 2026,
+  "sessions": [
+    {
+      "title": "令和8年（2026年）11月　定例会提出議案",
+      "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+      "bills": [
+        {
+          "number": "議第68号",
+          "title": "令和8年度三島市一般会計補正予算案（第6号）",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17869.pdf"
+          ]
+        },
+        {
+          "number": "議第69号",
+          "title": "令和8年度三島市国民健康保険特別会計補正予算案（第3号）",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17870.pdf"
+          ]
+        },
+        {
+          "number": "議第70号",
+          "title": "令和8年度三島市介護保険特別会計補正予算案（第3号）",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17871.pdf"
+          ]
+        },
+        {
+          "number": "議第71号",
+          "title": "令和8年度三島市水道事業会計補正予算案（第2号）",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17872.pdf"
+          ]
+        },
+        {
+          "number": "議第72号",
+          "title": "令和8年度三島市下水道事業会計補正予算案（第1号）",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17873.pdf"
+          ]
+        },
+        {
+          "number": "議第73号",
+          "title": "工事請負契約の締結について(三島市立西小学校校舎長寿命化改修等に伴う電気設備工事)",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17874.pdf"
+          ]
+        },
+        {
+          "number": "議第74号",
+          "title": "工事請負契約の締結について(三島市立西小学校校舎長寿命化改修等に伴う内装及び外構整備工事)",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17875.pdf"
+          ]
+        },
+        {
+          "number": "議第75号",
+          "title": "工事請負契約の締結について(三島市立西小学校校舎長寿命化改修等に伴う外壁改修及び屋上防水工事)",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17876.pdf"
+          ]
+        },
+        {
+          "number": "議第76号",
+          "title": "工事請負契約の変更について（（都）南町文教線ほか1路線電線共同溝整備工事）",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17877.pdf"
+          ]
+        },
+        {
+          "number": "議第77号",
+          "title": "物品購入契約の締結について（三島市清掃センター公用産業車両（油圧ショベル））",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17878.pdf"
+          ]
+        },
+        {
+          "number": "議第78号",
+          "title": "静岡地方税滞納整理機構規約の変更について",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17920.pdf"
+          ]
+        },
+        {
+          "number": "議第79号",
+          "title": "三島市食育基本条例の一部を改正する条例案",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17880.pdf"
+          ]
+        },
+        {
+          "number": "議第80号",
+          "title": "三島市下水道施設の構造の技術上の基準及び終末処理場の維持管理に関する条例の一部を改正する条例案",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17881.pdf"
+          ]
+        },
+        {
+          "number": "議第81号",
+          "title": "三島市行政手続における特定の個人を識別するための番号の利用等に関する法律に基づく個人番号の利用に関する条例の一部を改正する条例案",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17882.pdf"
+          ]
+        },
+        {
+          "number": "議第82号",
+          "title": "三島市税賦課徴収条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17883.pdf"
+          ]
+        },
+        {
+          "number": "議第83号",
+          "title": "三島市財政事情公表に関する条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17884.pdf"
+          ]
+        },
+        {
+          "number": "議第84号",
+          "title": "三島市水道事業及び公共下水道事業の業務の状況を説明する書類の作成及び公表に関する条例の一部を改正する条例案",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17885.pdf"
+          ]
+        },
+        {
+          "number": "議第85号",
+          "title": "三島市外4組合公平委員会委員の選任について",
+          "sourceWarnings": [],
+          "decisionDate": null,
+          "decisionDateRaw": "",
+          "result": "",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17886.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "令和8年（2026年）9月　定例会提出議案",
+      "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+      "bills": [
+        {
+          "number": "認第1号",
+          "title": "令和7年度三島市一般会計歳入歳出決算認定について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-10-02",
+          "decisionDateRaw": "令和8年10月2日",
+          "result": "認定",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16904.pdf"
+          ]
+        },
+        {
+          "number": "認第2号",
+          "title": "令和7年度三島市国民健康保険特別会計歳入歳出決算認定について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-10-02",
+          "decisionDateRaw": "令和8年10月2日",
+          "result": "認定",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16905.pdf"
+          ]
+        },
+        {
+          "number": "認第3号",
+          "title": "令和7年度三島市介護保険特別会計歳入歳出決算認定について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-10-02",
+          "decisionDateRaw": "令和8年10月2日",
+          "result": "認定",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16906.pdf"
+          ]
+        },
+        {
+          "number": "認第4号",
+          "title": "令和7年度三島市後期高齢者医療特別会計歳入歳出決算認定について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-10-02",
+          "decisionDateRaw": "令和8年10月2日",
+          "result": "認定",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16907.pdf"
+          ]
+        },
+        {
+          "number": "認第5号",
+          "title": "令和7年度三島市墓園事業特別会計歳入歳出決算認定について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-10-02",
+          "decisionDateRaw": "令和8年10月2日",
+          "result": "認定",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16908.pdf"
+          ]
+        },
+        {
+          "number": "認第6号",
+          "title": "令和7年度三島市駐車場事業特別会計歳入歳出決算認定について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-10-02",
+          "decisionDateRaw": "令和8年10月2日",
+          "result": "認定",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16909.pdf"
+          ]
+        },
+        {
+          "number": "認第7号",
+          "title": "認第7号_令和7年度三島市水道事業会計決算認定について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-10-02",
+          "decisionDateRaw": "令和8年10月2日",
+          "result": "認定",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16851.pdf"
+          ]
+        },
+        {
+          "number": "認第8号",
+          "title": "認第8号_令和7年度三島市下水道事業会計決算認定について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-10-02",
+          "decisionDateRaw": "令和8年10月2日",
+          "result": "認定",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16852.pdf"
+          ]
+        },
+        {
+          "number": "議第53号",
+          "title": "議第53号_令和7年度三島市水道事業会計未処分利益剰余金の処分について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-10-02",
+          "decisionDateRaw": "令和8年10月2日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17489.pdf"
+          ]
+        },
+        {
+          "number": "議第54号",
+          "title": "議第54号_令和7年度三島市下水道事業会計未処分利益剰余金の処分について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-10-02",
+          "decisionDateRaw": "令和8年10月2日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16792.pdf"
+          ]
+        },
+        {
+          "number": "議第55号",
+          "title": "議第55号_令和8年度三島市一般会計補正予算（第5号）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16793.pdf"
+          ]
+        },
+        {
+          "number": "議第56号",
+          "title": "議第56号_令和8年度三島市国民健康保険特別会計補正予算（第2号）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16794.pdf"
+          ]
+        },
+        {
+          "number": "議第57号",
+          "title": "議第57号_令和8年度三島市介護保険特別会計補正予算（第2号）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16795.pdf"
+          ]
+        },
+        {
+          "number": "議第58号",
+          "title": "議第58号_令和8年度三島市後期高齢者医療特別会計補正予算（第1号）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16796.pdf"
+          ]
+        },
+        {
+          "number": "議第59号",
+          "title": "議第59号_令和8年度 三島市水道事業会計 補正予算（第1号）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16797.pdf"
+          ]
+        },
+        {
+          "number": "議第60号",
+          "title": "議第60号_工事請負契約の締結について（三島市公営住宅山田住宅C棟大規模改修に伴う建築工事）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16798.pdf"
+          ]
+        },
+        {
+          "number": "議第61号",
+          "title": "議第61号_施設管理事故に伴う和解及び損害賠償の額の決定について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16799.pdf"
+          ]
+        },
+        {
+          "number": "議第62号",
+          "title": "議第62号_三島市特定教育・保育施設及び特定地域型保育事業の運営に関する基準を定める条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16800.pdf"
+          ]
+        },
+        {
+          "number": "議第63号",
+          "title": "議第63号_三島市家庭的保育事業等の設備及び運営に関する基準を定める条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16801.pdf"
+          ]
+        },
+        {
+          "number": "議第64号",
+          "title": "議第64号_三島市乳児等通園支援事業の設備及び運営に関する基準を定める条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16802.pdf"
+          ]
+        },
+        {
+          "number": "議第65号",
+          "title": "議第65号_三島市水道事業及び公共下水道事業の設置等に関する条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16803.pdf"
+          ]
+        },
+        {
+          "number": "議第66号",
+          "title": "議第66号_三島市認可地縁団体印鑑の登録及び証明に関する条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16804.pdf"
+          ]
+        },
+        {
+          "number": "議第67号",
+          "title": "議第67号‗三島市教育委員会委員の任命について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "同意",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16808.pdf"
+          ]
+        },
+        {
+          "number": "諮第1号",
+          "title": "諮第1号 人権擁護委員の推薦について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-09-04",
+          "decisionDateRaw": "令和8年9月4日",
+          "result": "同意",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16807.pdf"
+          ]
+        },
+        {
+          "number": "発議第3号",
+          "title": "発議第3号 知的障害者及び発達障害者の高等教育保障の制度化を求める意見書",
+          "sourceWarnings": [],
+          "decisionDate": "2026-10-02",
+          "decisionDateRaw": "令和8年10月2日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/36415.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17490.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "令和8年（2026年）6月　定例会提出議案",
+      "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+      "bills": [
+        {
+          "number": "議第39号",
+          "title": "令和8年度三島市一般会計補正予算（第3号）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15396.pdf"
+          ]
+        },
+        {
+          "number": "議第40号",
+          "title": "令和8年度三島市国民健康保険特別会計補正予算（第1号）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15397.pdf"
+          ]
+        },
+        {
+          "number": "議第41号",
+          "title": "令和8年度三島市介護保険特別会計補正予算（第1号）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15398.pdf"
+          ]
+        },
+        {
+          "number": "議第42号",
+          "title": "工事請負契約の変更について（(都)南町文教線ほか1路線電線共同溝整備工事）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15400.pdf"
+          ]
+        },
+        {
+          "number": "議第43号",
+          "title": "市道路線の廃止について",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15401.pdf"
+          ]
+        },
+        {
+          "number": "議第44号",
+          "title": "三島市消防団員等公務災害補償条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15402.pdf"
+          ]
+        },
+        {
+          "number": "議第45号",
+          "title": "三島市印鑑条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15403.pdf"
+          ]
+        },
+        {
+          "number": "議第46号",
+          "title": "三島市手数料条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15404.pdf"
+          ]
+        },
+        {
+          "number": "議第47号",
+          "title": "三島市介護保険条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15405.pdf"
+          ]
+        },
+        {
+          "number": "議第48号",
+          "title": "三島市地方活力向上地域における市税の特例に関する条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15406.pdf"
+          ]
+        },
+        {
+          "number": "議第49号",
+          "title": "三島市監査委員に関する条例の一部を改正する条例",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15407.pdf"
+          ]
+        },
+        {
+          "number": "議第50号",
+          "title": "農業委員会委員の任命",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-09",
+          "decisionDateRaw": "令和8年6月9日",
+          "result": "同意",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15408.pdf"
+          ]
+        },
+        {
+          "number": "議第51号",
+          "title": "令和8年度三島市一般会計補正予算案（第4号）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-26",
+          "decisionDateRaw": "令和8年6月26日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15750.pdf"
+          ]
+        },
+        {
+          "number": "議第52号",
+          "title": "物品購入契約の締結について（災害用トイレカー）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-06-26",
+          "decisionDateRaw": "令和8年6月26日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/33120.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/15751.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "令和8年（2026年）5月　臨時会提出議案",
+      "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/31964.html",
+      "bills": [
+        {
+          "number": "陳情第1号",
+          "title": "徳倉小学校に特別支援学級の設置を求める陳情",
+          "sourceWarnings": [],
+          "decisionDate": "2026-05-15",
+          "decisionDateRaw": "令和8年5月15日",
+          "result": "一部採択",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/31964.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/14809.pdf"
+          ]
+        },
+        {
+          "number": "承第3号",
+          "title": "専決処分の報告及び承認について（三島市税賦課徴収条例の一部を改正する条例）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-05-15",
+          "decisionDateRaw": "令和8年5月15日",
+          "result": "承認",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/31964.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/14810.pdf"
+          ]
+        },
+        {
+          "number": "承第4号",
+          "title": "専決処分の報告及び承認について（三島市都市計画税条例の一部を改正する条例）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-05-15",
+          "decisionDateRaw": "令和8年5月15日",
+          "result": "承認",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/31964.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/14811.pdf"
+          ]
+        },
+        {
+          "number": "承第5号",
+          "title": "専決処分の報告及び承認について（三島市国民健康保険税条例の一部を改正する条例）",
+          "sourceWarnings": [],
+          "decisionDate": "2026-05-15",
+          "decisionDateRaw": "令和8年5月15日",
+          "result": "承認",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/31964.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/14812.pdf"
+          ]
+        },
+        {
+          "number": "議第38号",
+          "title": "令和8年度三島市一般会計補正予算案（第2号)",
+          "sourceWarnings": [],
+          "decisionDate": "2026-05-15",
+          "decisionDateRaw": "令和8年5月15日",
+          "result": "可決",
+          "sourceUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/31964.html",
+          "documentUrls": [
+            "https://www.city.mishima.shizuoka.jp/uploaded/attachment/14813.pdf"
+          ]
+        }
+      ]
+    }
+  ]
+}

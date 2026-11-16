@@ -1,0 +1,13 @@
+{
+  "fiscalYear": 2026,
+  "from": "2026-04-01",
+  "through": "2027-03-31",
+  "collectedAt": "2026-11-14T11:33:50.504Z",
+  "billIndexUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/list216-519.html",
+  "minutesIndexUrl": "https://ssp.kaigiroku.net/tenant/mishima/SpTop.html",
+  "billSessions": 4,
+  "bills": 62,
+  "meetings": 7,
+  "minuteEntries": 922,
+  "aiGeneratedContent": false
+}

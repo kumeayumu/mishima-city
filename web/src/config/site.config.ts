@@ -4,26 +4,28 @@
  * @see docs/kawasaki/20260304_1000_別地域向けfork手順.md
  */
 export const siteConfig = {
-  siteName: "みらい議会＠福岡市",
+  siteName: "みらい議会＠三島市",
   siteDescription:
-    "福岡市議会で今どんな議案が検討されているか、わかりやすく伝えるプラットフォームです",
-  cityName: "福岡市",
-  councilName: "福岡市議会",
+    "三島市議会の議案・議決結果と会議録を、公式資料への出典付きで確認できるプラットフォームです",
+  cityName: "三島市",
+  sourceUrl: "https://github.com/kumeayumu/mishima-city/tree/mishima-migration",
+  councilName: "三島市議会",
   keywords: [
-    "みらい議会ー福岡市版",
+    "みらい議会ー三島市版",
     "議案",
-    "福岡市",
+    "三島市",
     "市議会",
     "地方政治",
     "政策",
     "解説",
   ],
-  councilBaseUrl: "https://gikai.city.fukuoka.lg.jp/",
+  councilBaseUrl: "https://www.city.mishima.shizuoka.jp/site/gikai/",
   /** 議案・議決結果の一覧ページ */
-  councilBillsDetailUrl: "https://gikai.city.fukuoka.lg.jp/result/result/",
-  twitterHashtag: "みらい議会福岡市版", // # なし
+  councilBillsDetailUrl:
+    "https://www.city.mishima.shizuoka.jp/site/gikai/list216-519.html",
+  twitterHashtag: "みらい議会三島市版", // # なし
   externalLinks: {
-    report: "https://forms.gle/PbZdpdRzTrsAuDST7",
+    report: "",
     aboutNote: "",
     donation: "https://team-mir.ai/support/donation",
     teamAbout: "https://team-mir.ai/about",
@@ -41,10 +43,10 @@ export const siteConfig = {
    * 利用規約や問い合わせ先に使用します。
    */
   operator: {
-    name: "バクモン" as string,
-    contactUrl: "https://x.com/bakumon0907" as string,
+    name: "久米歩" as string,
+    contactUrl: "mailto:kume@soma-wood.jp" as string,
     /** 利用規約の準拠法・管轄裁判所（第一審の専属的合意管轄） */
-    jurisdiction: "福岡地方裁判所" as string,
+    jurisdiction: "" as string,
   },
   /**
    * AI機能の有効/無効設定

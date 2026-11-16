@@ -15,3 +15,11 @@ docs/fukuoka/sample/
 
 # local claude permissions
 .claude/settings.local.json
+# Downloaded official source archives (regenerate with sources:mishima)
+/artifacts/mishima/
+
+# Project-local Windows Node.js/pnpm and their downloads
+/.tools/
+
+# Local Vercel project binding (no Git integration)
+.vercel/

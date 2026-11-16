@@ -9,11 +9,8 @@ export default defineConfig({
     setupFiles: [path.resolve(__dirname, "vitest.integration.setup.ts")],
     // テスト間のデータ干渉を防ぐためシーケンシャル実行
     pool: "forks",
-    poolOptions: {
-      forks: {
-        singleFork: true,
-      },
-    },
+    maxWorkers: 1,
+    fileParallelism: false,
     testTimeout: 30000,
     coverage: {
       provider: "v8",

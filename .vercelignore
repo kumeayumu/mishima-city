@@ -1,0 +1,16 @@
+# Upload from the repository root only; Root Directory remains web.
+**/.env
+**/.env.*
+**/.tools
+**/.vercel
+**/.git
+**/node_modules
+**/.next
+**/coverage
+**/*.tsbuildinfo
+artifacts
+docs
+.claude
+.agents
+.codex
+web/src/features/official-records/server/data/2026/minutes

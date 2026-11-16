@@ -1,27 +1,26 @@
 "use client";
 
-import { ExternalLink, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { RubyToggle } from "@/lib/rubyful";
 import { TextSizeToggle } from "@/lib/text-size";
 
 const NAV_LINKS = [
   { href: "/", label: "トップページ" },
-  { href: "/sessions", label: "過去の定例会" },
-  { href: "/committees", label: "委員会" },
-  { href: "/budget", label: "過去の予算" },
-  { href: "/press-conferences", label: "市長記者会見" },
+  { href: "/#official-bills", label: "2026年度の議案・議決結果" },
+  { href: "/#official-minutes", label: "2026年度の会議録" },
 ] as const;
 
 export function HamburgerMenu() {
+  const [open, setOpen] = useState(false);
   return (
-    <Popover>
+    <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
           variant="ghost"
@@ -39,6 +38,7 @@ export function HamburgerMenu() {
               <li key={href}>
                 <Link
                   href={href}
+                  onClick={() => setOpen(false)}
                   className="block px-2 py-2.5 text-sm font-medium text-mirai-text hover:text-primary-accent transition-colors"
                 >
                   {label}
@@ -47,19 +47,7 @@ export function HamburgerMenu() {
             ))}
           </ul>
           <div className="pt-3 mt-3 border-t border-mirai-border flex flex-col gap-3">
-            <RubyToggle />
             <TextSizeToggle />
-          </div>
-          <div className="pt-3 mt-3 border-t border-mirai-border">
-            <a
-              href="https://inshatancountry-jpn-tax-map.com/local-tax/?pref=40&entity=401307"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-2 py-2 text-sm text-mirai-text-secondary hover:text-primary-accent transition-colors"
-            >
-              <ExternalLink className="h-3.5 w-3.5 shrink-0" />
-              税金の使い道マップ（外部サイト）
-            </a>
           </div>
         </nav>
       </PopoverContent>

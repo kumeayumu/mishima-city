@@ -1,0 +1,61 @@
+{
+  "fiscalYear": 2026,
+  "meetings": [
+    {
+      "id": "453-1",
+      "name": "令和　８年　　６月　定例会",
+      "kind": "本会議",
+      "date": "2026-06-09",
+      "sourceUrl": "https://ssp.kaigiroku.net/tenant/mishima/SpMinuteView.html?council_id=453&schedule_id=1&tenant_id=406",
+      "entryCount": 178
+    },
+    {
+      "id": "453-2",
+      "name": "令和　８年　　６月　定例会",
+      "kind": "本会議",
+      "date": "2026-06-18",
+      "sourceUrl": "https://ssp.kaigiroku.net/tenant/mishima/SpMinuteView.html?council_id=453&schedule_id=2&tenant_id=406",
+      "entryCount": 129
+    },
+    {
+      "id": "453-3",
+      "name": "令和　８年　　６月　定例会",
+      "kind": "本会議",
+      "date": "2026-06-19",
+      "sourceUrl": "https://ssp.kaigiroku.net/tenant/mishima/SpMinuteView.html?council_id=453&schedule_id=3&tenant_id=406",
+      "entryCount": 125
+    },
+    {
+      "id": "453-4",
+      "name": "令和　８年　　６月　定例会",
+      "kind": "本会議",
+      "date": "2026-06-22",
+      "sourceUrl": "https://ssp.kaigiroku.net/tenant/mishima/SpMinuteView.html?council_id=453&schedule_id=4&tenant_id=406",
+      "entryCount": 134
+    },
+    {
+      "id": "453-5",
+      "name": "令和　８年　　６月　定例会",
+      "kind": "本会議",
+      "date": "2026-06-23",
+      "sourceUrl": "https://ssp.kaigiroku.net/tenant/mishima/SpMinuteView.html?council_id=453&schedule_id=5&tenant_id=406",
+      "entryCount": 137
+    },
+    {
+      "id": "453-6",
+      "name": "令和　８年　　６月　定例会",
+      "kind": "本会議",
+      "date": "2026-06-26",
+      "sourceUrl": "https://ssp.kaigiroku.net/tenant/mishima/SpMinuteView.html?council_id=453&schedule_id=6&tenant_id=406",
+      "entryCount": 60
+    },
+    {
+      "id": "452-1",
+      "name": "令和　８年　　５月　臨時会",
+      "kind": "本会議",
+      "date": "2026-05-15",
+      "sourceUrl": "https://ssp.kaigiroku.net/tenant/mishima/SpMinuteView.html?council_id=452&schedule_id=1&tenant_id=406",
+      "entryCount": 159
+    }
+  ]
+}
