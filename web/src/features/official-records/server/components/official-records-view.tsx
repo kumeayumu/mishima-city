@@ -44,6 +44,23 @@ export function OfficialRecordsView({
           議案 {manifest.bills}件 ／ 会議録 {manifest.meetings}日分
         </p>
       </section>
+      <section
+        className="rounded-2xl border border-mirai-border bg-card p-5"
+        aria-labelledby="official-members"
+      >
+        <h2 id="official-members" className="text-xl font-bold text-mirai-text">
+          議員から探す
+        </h2>
+        <p className="mt-2 text-sm text-mirai-text-secondary">
+          公式名簿に基づく22人の議員情報を、資料の基準日と出典付きで確認できます。
+        </p>
+        <Link
+          href="/members"
+          className="mt-2 inline-block min-h-11 py-2 text-sm font-bold text-mirai-text underline"
+        >
+          議員一覧を見る
+        </Link>
+      </section>
       <section className="space-y-6" aria-labelledby="official-bills">
         <h2
           id="official-bills"

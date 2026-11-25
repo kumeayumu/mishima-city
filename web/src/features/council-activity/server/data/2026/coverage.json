@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "scope": "2026年度の議員活動基盤（名簿は資料の基準日時点）",
+  "rosterSnapshotId": "roster-20260515",
+  "factionSnapshotId": "factions-20260520",
+  "committeeSnapshotIds": [
+    "standing-20260515",
+    "operations-20260520",
+    "special-20260515"
+  ],
+  "reviewStatus": "source_checked",
+  "operatorReview": "pending",
+  "activities": {
+    "votes": "not_collected",
+    "questionsAndAnswers": "not_collected"
+  },
+  "expectedMembers": 22
+}

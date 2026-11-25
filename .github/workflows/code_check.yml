@@ -44,8 +44,11 @@ jobs:
         run: pnpm --filter web build
         env:
           NEXT_PUBLIC_WEB_URL: https://mishima-preview.example.com
+          MISHIMA_CI_VERIFY: "1"
 
       - name: Check public pages in production mode
+        env:
+          MISHIMA_CI_VERIFY: "1"
         run: |
           pnpm --filter web start --port 3002 --hostname 127.0.0.1 > /tmp/mishima-web.log 2>&1 &
           server_pid=$!

@@ -152,3 +152,63 @@ test("zero results can be cleared without losing meeting navigation", async () =
     "該当62件／全62件"
   );
 });
+
+test("member directory and every member page expose source-dated facts without invented activity totals", async () => {
+  const members = JSON.parse(
+    fs.readFileSync(
+      "web/src/features/council-activity/server/data/members.json",
+      "utf8"
+    )
+  );
+  const memberCoverage = JSON.parse(
+    fs.readFileSync(
+      "web/src/features/council-activity/server/data/2026/coverage.json",
+      "utf8"
+    )
+  );
+  const memberSources = JSON.parse(
+    fs.readFileSync(
+      "web/src/features/council-activity/server/data/sources.json",
+      "utf8"
+    )
+  );
+  const expectedReviewLabel =
+    memberCoverage.operatorReview === "approved" &&
+    memberSources.every((source) => source.review.operatorReview === "approved")
+      ? "運営者確認済み"
+      : "運営者による確認前";
+  assert.equal(members.length, 22);
+  const directory = await fetch(`${base}/members`);
+  assert.equal(directory.status, 200);
+  const list = await directory.text();
+  assert.match(list, /該当(?:<!-- -->)?22/);
+  for (const member of members) {
+    const path = `/members/${member.id}`;
+    assert.ok(list.includes(path));
+    const response = await fetch(base + path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    for (const text of [
+      member.name,
+      member.kana,
+      "2026-05-15",
+      "2026-05-20",
+      "データ整備中",
+      "個人の就任日・途中異動は未確認",
+      "公式の議員紹介・名簿",
+      expectedReviewLabel,
+      "三島市・三島市議会",
+    ]) {
+      assert.ok(html.includes(text), `${path}: ${text}`);
+    }
+    assert.ok(
+      html.includes("https://www.city.mishima.shizuoka.jp/site/gikai/4585.html")
+    );
+    assert.doesNotMatch(
+      html,
+      /賛成0件|反対0件|登壇0回|活動スコア|googletagmanager\.com|rubyful-v2\.s3|_vercel\/speed-insights/
+    );
+    assert.match(response.headers.get("x-robots-tag") || "", /noindex/);
+  }
+  assert.equal((await fetch(`${base}/members/not-a-member`)).status, 404);
+});
