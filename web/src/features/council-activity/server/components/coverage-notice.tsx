@@ -1,8 +1,11 @@
 import "server-only";
 import type { ActivityData } from "../../shared/types/council-activity";
 import { isMemberDataApproved } from "../../shared/utils/member-publication";
+import { getVoteReviewLabel } from "../../shared/utils/vote-data";
+import { getCouncilVotes } from "../repositories/council-votes-repository";
 
 export function CoverageNotice({ data }: { data: ActivityData }) {
+  const voteReview = getVoteReviewLabel(getCouncilVotes().data.verification);
   const roster = data.snapshots.rosters.find(
     (r) => r.id === data.coverage.rosterSnapshotId
   );
@@ -36,9 +39,7 @@ export function CoverageNotice({ data }: { data: ActivityData }) {
         {data.coverage.activities.votes === "partial" ? (
           <>
             議案賛否は個人表のある9議案を整備し、
-            {data.coverage.voteIndependentReview === "approved"
-              ? "独立確認済みです。"
-              : "独立確認待ちです。"}
+            {voteReview}。
           </>
         ) : (
           "議案賛否は整備中です。"

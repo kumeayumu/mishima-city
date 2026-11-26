@@ -1,6 +1,10 @@
 import { z } from "zod";
 import type { ActivityData } from "../types/council-activity";
 import {
+  getReviewEvidenceDigest,
+  getReviewedEventDigests,
+} from "./vote-approval-digests";
+import {
   getPresiderAtSequence,
   normalizeSourceMark,
   resolveEvidenceMark,
@@ -8,6 +12,9 @@ import {
 
 const id = z.string().min(1),
   date = z.iso.date();
+const eventDigests = z.array(
+  z.object({ eventId: id, sha256: z.string().regex(/^[a-f0-9]{64}$/) }).strict()
+);
 export const voteStates = [
   "voted",
   "absent",
@@ -160,6 +167,40 @@ const schema = z
             })
             .strict()
         ),
+        qualityApproval: z
+          .object({
+            policy: z.literal("three-stage-v1"),
+            digestVersion: z.literal("event-facts-v1"),
+            reviewedEvents: eventDigests.optional(),
+            evidenceSha256: z
+              .string()
+              .regex(/^[a-f0-9]{64}$/)
+              .optional(),
+            approver: id.optional(),
+            date: date.optional(),
+            independentAcceptance: z
+              .object({
+                approver: id,
+                date,
+                reviewedEvents: eventDigests,
+                evidenceSha256: z.string().regex(/^[a-f0-9]{64}$/),
+                method: z.literal(
+                  "別AIによる公式資料のみからの独立抽出・全件照合"
+                ),
+              })
+              .strict()
+              .optional(),
+            baselineCommit: z.string().regex(/^[a-f0-9]{40}$/),
+            independentReviewMeaning: z.literal("別AI独立再照合結果の受入承認"),
+            humanMethod: z.literal("公式原表と実装データの目視比較").optional(),
+            blindHumanExtraction: z.literal(false).optional(),
+            cells: z.literal(198),
+            matched: z.literal(198).optional(),
+            mismatches: z.literal(0).optional(),
+            held: z.literal(0).optional(),
+          })
+          .strict()
+          .optional(),
         independentReview: z.enum(["pending", "approved"]),
         operatorReview: z.enum(["pending", "approved"]),
         note: id,
@@ -386,6 +427,83 @@ export function parseVoteData(
   )
     errors.push("照合方式別の件数が不整合");
   const ai = data.verification.independentAiComparison;
+  const approval = data.verification.qualityApproval;
+  const latestCorrection = data.verification.correctionHistory
+    .map((c) => c.date)
+    .sort()
+    .at(-1);
+  if (
+    data.verification.independentReview === "approved" &&
+    approval?.independentAcceptance &&
+    latestCorrection &&
+    approval.independentAcceptance.date < latestCorrection
+  )
+    errors.push("承認順序の日付が不整合：別AI受入が対象の訂正日より前");
+  if (
+    data.verification.operatorReview === "approved" &&
+    approval?.date &&
+    approval.independentAcceptance &&
+    approval.date < approval.independentAcceptance.date
+  )
+    errors.push("承認順序の日付が不整合：本人最終承認が別AI受入より前");
+  if (
+    data.verification.independentReview === "approved" &&
+    !approval?.independentAcceptance
+  )
+    errors.push("別AI受入承認の記録が不足");
+  if (
+    data.verification.operatorReview === "approved" &&
+    (!approval?.approver ||
+      !approval.date ||
+      !approval.humanMethod ||
+      approval.blindHumanExtraction !== false ||
+      approval.matched !== data.votes.length ||
+      approval.mismatches !== 0 ||
+      approval.held !== 0)
+  )
+    errors.push("本人目視最終承認の記録が不足");
+  if (
+    data.verification.operatorReview === "approved" &&
+    data.verification.independentReview !== "approved"
+  )
+    errors.push("三段階の承認順序が不整合：別AI受入前の本人最終承認");
+  if (
+    data.verification.independentReview === "approved" ||
+    data.verification.operatorReview === "approved"
+  ) {
+    const currentEvents = getReviewedEventDigests(data, activity, archive);
+    const currentEvidence = getReviewEvidenceDigest(data.verification);
+    for (const stage of [
+      {
+        name: "別AI",
+        approved: data.verification.independentReview === "approved",
+        scope: approval?.independentAcceptance,
+      },
+      {
+        name: "本人",
+        approved: data.verification.operatorReview === "approved",
+        scope: approval,
+      },
+    ]) {
+      if (
+        stage.approved &&
+        (!stage.scope ||
+          JSON.stringify(stage.scope.reviewedEvents) !==
+            JSON.stringify(currentEvents) ||
+          stage.scope.evidenceSha256 !== currentEvidence)
+      )
+        errors.push(`${stage.name}承認対象データ・照合証拠のハッシュが不一致`);
+    }
+  }
+  if (
+    (data.verification.independentReview === "approved" ||
+      data.verification.operatorReview === "approved") &&
+    (!data.verification.qualityApproval ||
+      ai.postCorrectionStatus !== "completed_reported" ||
+      ai.postCorrection?.matched !== data.votes.length ||
+      ai.postCorrection?.mismatches !== 0)
+  )
+    errors.push("三段階承認の根拠・独立確認が不足");
   if (
     ai.postCorrectionStatus === "completed_reported" &&
     (!ai.postCorrection ||
@@ -520,7 +638,11 @@ export function describeVote(
     return { symbol: "外", label: "当時の対象外", kind: "neutral" };
   if (!vote)
     return availability === "result_unreported"
-      ? { symbol: "結", label: "議決結果は公式資料に未掲載", kind: "neutral" }
+      ? {
+          symbol: "結",
+          label: "議決結果は保存済み議案一覧に未掲載",
+          kind: "neutral",
+        }
       : { symbol: "未", label: "個人別賛否は資料未掲載", kind: "neutral" };
   if (vote.choice)
     return {
@@ -567,10 +689,10 @@ export function selectVoteBills(
 
 export function getVoteReviewLabel(v: VoteData["verification"]) {
   if (v.independentReview === "approved" && v.operatorReview === "approved")
-    return "独立二次照合・運営者校閲済み";
+    return "別AI独立照合受入・本人目視最終承認済み";
   if (v.independentReview === "approved")
-    return "独立二次照合済み・運営者校閲待ち";
-  return "機械・画像照合値・人による独立二次照合待ち";
+    return "別AI独立照合受入済み・本人目視最終承認待ち";
+  return "機械・画像照合値・別AI照合受入／本人目視最終承認待ち";
 }
 export function getVoteCoverage(data: VoteData) {
   const recorded = data.references.filter(

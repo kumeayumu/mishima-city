@@ -1,4 +1,8 @@
 import { z } from "zod";
+import {
+  getActivityApprovalDigests,
+  getSourceApprovalDigest,
+} from "./vote-approval-digests";
 
 const id = z.string().min(1);
 const date = z.iso.date();
@@ -8,11 +12,38 @@ const review = z
     reviewer: z.string().min(1),
     checkedAt: z.iso.datetime(),
     operatorReview: z.enum(["pending", "approved"]),
+    operatorApproval: z
+      .object({
+        approver: z.string().min(1),
+        date: z.iso.date(),
+        baselineCommit: z.string().regex(/^[a-f0-9]{40}$/),
+        reviewedSha256: z.string().regex(/^[a-f0-9]{64}$/),
+      })
+      .strict()
+      .optional(),
   })
   .strict();
 const period = { validFrom: date.nullable(), validTo: date.nullable() };
 const source = z
   .object({
+    notice: z
+      .object({
+        asOf: date,
+        context: id,
+        reportUrl: z.url().refine((value) => {
+          const u = new URL(value);
+          return (
+            u.protocol === "https:" &&
+            u.hostname === "www.city.mishima.shizuoka.jp"
+          );
+        }),
+        decisionDate: date,
+        passed: z.number().int().nonnegative(),
+        consented: z.number().int().nonnegative(),
+        limitations: id,
+      })
+      .strict()
+      .optional(),
     id,
     title: z.string().min(1),
     url: z.url().refine((value) => {
@@ -146,6 +177,23 @@ export const activityDataSchema = z
         committeeSnapshotIds: z.array(id).min(1),
         reviewStatus: z.literal("source_checked"),
         operatorReview: z.enum(["pending", "approved"]),
+        operatorApproval: z
+          .object({
+            approver: id,
+            date,
+            baselineCommit: z.string().regex(/^[a-f0-9]{40}$/),
+            digestVersion: z.literal("activity-facts-v1"),
+            reviewedData: z.array(
+              z
+                .object({
+                  scopeId: id,
+                  sha256: z.string().regex(/^[a-f0-9]{64}$/),
+                })
+                .strict()
+            ),
+          })
+          .strict()
+          .optional(),
         voteIndependentReview: z.enum(["pending", "approved"]).optional(),
         activities: z
           .object({
@@ -162,6 +210,26 @@ export const activityDataSchema = z
 export function parseActivityData(input: unknown) {
   const data = activityDataSchema.parse(input);
   const errors: string[] = [];
+  if (
+    data.coverage.operatorReview === "approved" &&
+    (!data.coverage.operatorApproval ||
+      JSON.stringify(data.coverage.operatorApproval.reviewedData) !==
+        JSON.stringify(getActivityApprovalDigests(data)))
+  )
+    errors.push("議員・名簿の承認対象ハッシュが不一致");
+  for (const source of data.sources) {
+    if (
+      source.id === "nov-bills" &&
+      source.review.operatorReview === "approved" &&
+      !source.notice
+    )
+      errors.push("承認済み11月出典の注記が不足");
+    if (
+      source.review.operatorReview === "approved" &&
+      !source.review.operatorApproval
+    )
+      errors.push("出典承認の根拠が不足");
+  }
   function unique(values: (string | number)[], label: string) {
     if (new Set(values).size !== values.length) errors.push(`${label}の重複`);
   }
@@ -175,6 +243,14 @@ export function parseActivityData(input: unknown) {
         errors.push("別名・表示名が異なる議員IDで衝突");
       owners.set(key, member.id);
     }
+  }
+  for (const source of data.sources) {
+    if (
+      source.review.operatorReview === "approved" &&
+      source.review.operatorApproval?.reviewedSha256 !==
+        getSourceApprovalDigest(source)
+    )
+      errors.push("出典承認の資料版ハッシュが不一致");
   }
   const sourceIds = new Set(data.sources.map((s) => s.id));
   const termIds = new Set(data.snapshots.terms.map((t) => t.id));

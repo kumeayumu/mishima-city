@@ -4,6 +4,7 @@ import members from "../../server/data/members.json";
 import snapshots from "../../server/data/roster-snapshots.json";
 import sources from "../../server/data/sources.json";
 import { parseActivityData } from "./validate-activity-data";
+import { getSourceApprovalDigest } from "./vote-approval-digests";
 
 const fixture = () =>
   structuredClone({ members, sources, snapshots, coverage });
@@ -26,6 +27,7 @@ describe("official member data validation", () => {
   });
   it("allows multiple equivalent spellings for the same member", () => {
     const d = fixture();
+    d.coverage.operatorReview = "pending"; // Valid spelling change is not silently approved.
     d.members[0].nameVariants = [d.members[0].name];
     expect(() => parseActivityData(d)).not.toThrow();
   });
@@ -210,4 +212,68 @@ describe("official member data validation", () => {
       })
     ).toThrow();
   });
+});
+
+it("rejects source approval without its operator evidence", () => {
+  const d = fixture();
+  const source = d.sources[0] as Omit<(typeof d.sources)[number], "review"> & {
+    review: Omit<(typeof d.sources)[number]["review"], "operatorApproval"> & {
+      operatorApproval?: (typeof d.sources)[number]["review"]["operatorApproval"];
+    };
+  };
+  delete source.review.operatorApproval;
+  expect(() => parseActivityData(d)).toThrow("出典承認の根拠");
+});
+
+it.each([
+  "sha256",
+  "url",
+  "usage",
+] as const)("rejects a revised approved source %s under its old acceptance", (field) => {
+  const d = fixture(),
+    source = d.sources.find((s) => s.id === "nov-bills");
+  if (!source) throw Error("missing source");
+  source[field] =
+    field === "sha256"
+      ? "0".repeat(64)
+      : field === "url"
+        ? "https://www.city.mishima.shizuoka.jp/site/gikai/39043.html"
+        : `${source.usage} changed scope`;
+  expect(() => parseActivityData(d)).toThrow("出典承認の資料版ハッシュ");
+});
+
+it("rejects swapping valid seats under old roster approval", () => {
+  const d = fixture(),
+    rows = d.snapshots.rosters[0].entries;
+  [rows[0].seatNumber, rows[1].seatNumber] = [
+    rows[1].seatNumber,
+    rows[0].seatNumber,
+  ];
+  expect(() => parseActivityData(d)).toThrow("議員・名簿の承認対象ハッシュ");
+});
+it("rejects member facts changed without renewing their review scope", () => {
+  const d = fixture();
+  d.members[0].kana += "あ";
+  expect(() => parseActivityData(d)).toThrow("議員・名簿の承認対象ハッシュ");
+});
+
+it("rejects a changed November annotation under its old source approval", () => {
+  const d = fixture(),
+    source = d.sources.find((s) => s.id === "nov-bills");
+  if (!source?.notice) throw Error("missing notice");
+  source.notice.passed = 16;
+  expect(() => parseActivityData(d)).toThrow("出典承認の資料版ハッシュ");
+});
+
+it("allows missing supplemental notes while pending but requires them for November approval", () => {
+  const d = fixture(),
+    source = d.sources.find((s) => s.id === "nov-bills");
+  if (!source) throw Error("missing source");
+  delete source.notice;
+  source.review.operatorReview = "pending";
+  expect(() => parseActivityData(d)).not.toThrow();
+  source.review.operatorReview = "approved";
+  source.review.operatorApproval.reviewedSha256 =
+    getSourceApprovalDigest(source);
+  expect(() => parseActivityData(d)).toThrow("承認済み11月出典の注記");
 });

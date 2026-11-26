@@ -1,3 +1,4 @@
+import { NovemberResultNote } from "@/features/council-activity/server/components/vote-shared";
 import "server-only";
 import Link from "next/link";
 import { getCouncilVotes } from "@/features/council-activity/server/repositories/council-votes-repository";
@@ -81,6 +82,7 @@ export function OfficialRecordsView({
         >
           議案・議決結果
         </h2>
+        <NovemberResultNote />
         <BillSearchForm
           filters={filters}
           sessions={bills.sessions}
@@ -112,7 +114,7 @@ export function OfficialRecordsView({
                     議案詳細・個人別賛否を見る
                   </Link>
                   <p className="text-sm text-mirai-text-secondary">
-                    {bill.result || "議決結果は公式資料に未掲載"}
+                    {bill.result || "議決結果は保存済み議案一覧に未掲載"}
                     {bill.decisionDate ? `（${bill.decisionDate}）` : ""}
                   </p>
                   {bill.sourceWarnings.map((warning) => (

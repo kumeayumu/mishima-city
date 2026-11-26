@@ -11,7 +11,13 @@
       "status": "source_checked",
       "reviewer": "Codex",
       "checkedAt": "2026-11-24T07:01:55.365Z",
-      "operatorReview": "pending"
+      "operatorReview": "approved",
+      "operatorApproval": {
+        "approver": "久米歩",
+        "date": "2026-11-26",
+        "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+        "reviewedSha256": "ad5f84bba011179bf06f20c13421f60c334be2a12f197d8601e52243e9289935"
+      }
     },
     "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
   },
@@ -27,7 +33,13 @@
       "status": "source_checked",
       "reviewer": "Codex",
       "checkedAt": "2026-11-24T07:01:55.547Z",
-      "operatorReview": "pending"
+      "operatorReview": "approved",
+      "operatorApproval": {
+        "approver": "久米歩",
+        "date": "2026-11-26",
+        "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+        "reviewedSha256": "71e262523870c0e0563a9aa2f2e2cfe7b1653ceadd7e8e81f2142e57783350f7"
+      }
     },
     "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
   },
@@ -43,7 +55,13 @@
       "status": "source_checked",
       "reviewer": "Codex",
       "checkedAt": "2026-11-24T07:01:55.921Z",
-      "operatorReview": "pending"
+      "operatorReview": "approved",
+      "operatorApproval": {
+        "approver": "久米歩",
+        "date": "2026-11-26",
+        "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+        "reviewedSha256": "36ce8e41c0350ba3bd55f15a3fa75a4c6cfc50ee5bbe169b2991b47980cad2a0"
+      }
     },
     "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
   },
@@ -59,7 +77,13 @@
       "status": "source_checked",
       "reviewer": "Codex",
       "checkedAt": "2026-11-24T07:01:56.088Z",
-      "operatorReview": "pending"
+      "operatorReview": "approved",
+      "operatorApproval": {
+        "approver": "久米歩",
+        "date": "2026-11-26",
+        "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+        "reviewedSha256": "a1911a41b7cb75b68dc116a05d12ae9839072699f47bf7538d69802a4f4e9a25"
+      }
     },
     "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
   },
@@ -75,7 +99,13 @@
       "status": "source_checked",
       "reviewer": "Codex",
       "checkedAt": "2026-11-24T07:01:56.246Z",
-      "operatorReview": "pending"
+      "operatorReview": "approved",
+      "operatorApproval": {
+        "approver": "久米歩",
+        "date": "2026-11-26",
+        "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+        "reviewedSha256": "3f6695750c3679698d225411cebd19c62a85e09f42c59441587c9c8f1975f674"
+      }
     },
     "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
   },
@@ -91,7 +121,13 @@
       "status": "source_checked",
       "reviewer": "Codex",
       "checkedAt": "2026-11-24T07:01:56.385Z",
-      "operatorReview": "pending"
+      "operatorReview": "approved",
+      "operatorApproval": {
+        "approver": "久米歩",
+        "date": "2026-11-26",
+        "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+        "reviewedSha256": "66a4f838860394dd6d47cf7045dbdb384a5507a73a7dd2614e4ed1f2abe437a7"
+      }
     },
     "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
   },
@@ -107,7 +143,13 @@
       "status": "source_checked",
       "reviewer": "Codex",
       "checkedAt": "2026-11-24T07:01:56.595Z",
-      "operatorReview": "pending"
+      "operatorReview": "approved",
+      "operatorApproval": {
+        "approver": "久米歩",
+        "date": "2026-11-26",
+        "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+        "reviewedSha256": "1a76397829144f58467ba00d874731ced9b234c4521af7075893b1677a3f81a1"
+      }
     },
     "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
   },
@@ -123,9 +165,15 @@
       "status": "source_checked",
       "reviewer": "Codex",
       "checkedAt": "2026-11-25T11:11:12.156Z",
-      "operatorReview": "pending"
+      "operatorReview": "approved",
+      "operatorApproval": {
+        "approver": "久米歩",
+        "date": "2026-11-26",
+        "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+        "reviewedSha256": "a0bae4959b43e0dd0754ffea608aafb76ba5a85bfd514913c53d7bab75dd072d"
+      }
     },
-    "usage": "公式リンクと採決の事実情報のみ。全文・写真は配布しない。独立二次照合と運営者校閲は未完了。"
+    "usage": "公式リンクと採決の事実情報のみ。別AI独立再照合・本人目視最終確認を受入承認済み。全文・写真の再配布許諾とは別。"
   },
   {
     "id": "sep-votes",
@@ -139,9 +187,15 @@
       "status": "source_checked",
       "reviewer": "Codex",
       "checkedAt": "2026-11-25T11:11:21.966Z",
-      "operatorReview": "pending"
+      "operatorReview": "approved",
+      "operatorApproval": {
+        "approver": "久米歩",
+        "date": "2026-11-26",
+        "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+        "reviewedSha256": "ee8a7e82d96dc72337be18bbc2b43baaf4588eddad7580621ab931d97728a794"
+      }
     },
-    "usage": "公式リンクと採決の事実情報のみ。全文・写真は配布しない。独立二次照合と運営者校閲は未完了。"
+    "usage": "公式リンクと採決の事実情報のみ。別AI独立再照合・本人目視最終確認を受入承認済み。全文・写真の再配布許諾とは別。"
   },
   {
     "id": "nov-bills",
@@ -155,9 +209,24 @@
       "status": "source_checked",
       "reviewer": "Codex",
       "checkedAt": "2026-11-25T11:11:22.341Z",
-      "operatorReview": "pending"
+      "operatorReview": "approved",
+      "operatorApproval": {
+        "approver": "久米歩",
+        "date": "2026-11-26",
+        "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+        "reviewedSha256": "e101b676b59d749263a3c094fa1bbb703966a15705b9ad4796dd9ec0fcd111fd"
+      }
     },
-    "usage": "公式リンクと採決の事実情報のみ。全文・写真は配布しない。独立二次照合と運営者校閲は未完了。"
+    "usage": "保存済み議案一覧の結果欄空欄という記載範囲を承認。追加調査では公式概要報告（39043.html）に17可決・1同意を確認。69〜72号の個別対応は追加確認事項。今回18議案の結果データは更新しない。",
+    "notice": {
+      "asOf": "2026-11-26",
+      "context": "11月議第68〜85号は保存済み議案一覧の結果欄が空欄でした。",
+      "reportUrl": "https://www.city.mishima.shizuoka.jp/site/gikai/39043.html",
+      "decisionDate": "2026-11-17",
+      "passed": 17,
+      "consented": 1,
+      "limitations": "議第69〜72号の個別対応は追加確認事項です。同日の時点では18議案の結果データを更新していません。個人別賛否は推定しません。"
+    }
   },
   {
     "id": "may-minutes",
@@ -171,7 +240,13 @@
       "status": "source_checked",
       "reviewer": "Codex",
       "checkedAt": "2026-11-26T03:00:24.842Z",
-      "operatorReview": "pending"
+      "operatorReview": "approved",
+      "operatorApproval": {
+        "approver": "久米歩",
+        "date": "2026-11-26",
+        "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+        "reviewedSha256": "2e69962b24495c6960855dd7fec38e74957394b365c54ad89264aba95ca7bf21"
+      }
     },
     "usage": "公式リンク・採決時の議事進行順序のみ。SHA-256は公式minutes/get_minuteのJSONP応答のバイト列。会議録本文は追加保存・配布しない。"
   }

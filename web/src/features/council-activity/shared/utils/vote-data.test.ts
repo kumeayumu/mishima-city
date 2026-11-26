@@ -14,6 +14,10 @@ import snapshots from "../../server/data/roster-snapshots.json";
 import sources from "../../server/data/sources.json";
 import { parseActivityData } from "./validate-activity-data";
 import {
+  getReviewEvidenceDigest,
+  getReviewedEventDigests,
+} from "./vote-approval-digests";
+import {
   applyVoteResultsToSessions,
   describeVote,
   getEventFaction,
@@ -29,14 +33,23 @@ import {
   type Vote,
 } from "./vote-data";
 
-const activity = parseActivityData({ members, sources, snapshots, coverage });
+const activity = parseActivityData({
+  members,
+  sources,
+  snapshots,
+  coverage: { ...coverage, voteIndependentReview: "pending" },
+});
 const fixture = () =>
   structuredClone({
     references,
     events,
     votes,
     affiliations,
-    verification,
+    verification: {
+      ...verification,
+      independentReview: "pending",
+      operatorReview: "pending",
+    },
     resultChecks,
     cellEvidence,
   });
@@ -348,9 +361,9 @@ it("does not leave stale review-pending labels after approval", () => {
   const v = structuredClone(data.verification);
   expect(getVoteReviewLabel(v)).toContain("待ち");
   v.independentReview = "approved";
-  expect(getVoteReviewLabel(v)).toContain("運営者校閲待ち");
+  expect(getVoteReviewLabel(v)).toContain("本人目視最終承認待ち");
   v.operatorReview = "approved";
-  expect(getVoteReviewLabel(v)).toBe("独立二次照合・運営者校閲済み");
+  expect(getVoteReviewLabel(v)).toBe("別AI独立照合受入・本人目視最終承認済み");
 });
 
 describe("2026-05-15 correction preserves named individual votes", () => {
@@ -551,4 +564,239 @@ it("does not replace original results with an unpublished check", () => {
   expect(applyVoteResultsToSessions(archive.sessions, bills)).toEqual(
     archive.sessions
   );
+});
+
+describe("operator-approved three-stage quality policy", () => {
+  const approvedActivity = parseActivityData({
+    members,
+    sources,
+    snapshots,
+    coverage,
+  });
+  const approved = () => ({
+    ...fixture(),
+    verification: structuredClone(verification),
+  });
+  it("rejects a coordinated same-count vote and evidence edit under old approval", () => {
+    const d = approved();
+    const vote = d.votes[0];
+    vote.choice = "no";
+    vote.observedMark = "×";
+    const evidence = d.cellEvidence.find(
+      (c) => c.eventId === vote.eventId && c.memberId === vote.memberId
+    );
+    if (!evidence) throw Error("missing evidence");
+    evidence.textMark = "×";
+    evidence.imageMark = "×";
+    expect(d.votes).toHaveLength(198);
+    expect(() => parseVoteData(d, approvedActivity, archive)).toThrow(
+      "承認対象データ・照合証拠のハッシュ"
+    );
+  });
+  it("rejects altered evidence even if observed votes are unchanged", () => {
+    const d = approved();
+    d.cellEvidence[0].imageMark = "×";
+    expect(() => parseVoteData(d, approvedActivity, archive)).toThrow(
+      "承認対象データ・照合証拠のハッシュ"
+    );
+  });
+  it("rejects overriding the displayed result of a reviewed bill under old approval", () => {
+    const d = parseVoteData(approved(), approvedActivity, archive);
+    d.resultChecks.push({
+      billId: d.events[0].billId,
+      sourceId: "may-votes",
+      checkedAt: "2026-11-27T00:00:00.000Z",
+      result: "否決",
+      date: "2026-05-15",
+      status: "published",
+    });
+    expect(() => parseVoteData(d, approvedActivity, archive)).toThrow(
+      "ハッシュ"
+    );
+  });
+  it("rejects reversed approval order without relying on aggregate coverage", () => {
+    const d = approved(),
+      a = structuredClone(approvedActivity);
+    d.verification.independentReview = "pending";
+    a.coverage.voteIndependentReview = "pending";
+    expect(() => parseVoteData(d, a, archive)).toThrow("承認順序");
+  });
+  it("invalidates final approval when the previous evidence expires", () => {
+    const d = approved();
+    d.verification.independentAiComparison.postCorrectionStatus = "pending";
+    expect(() => parseVoteData(d, approvedActivity, archive)).toThrow(
+      "三段階承認"
+    );
+  });
+  it("rejects a missing approved event scope", () => {
+    const d = approved();
+    d.verification.qualityApproval.reviewedEvents.pop();
+    expect(() => parseVoteData(d, approvedActivity, archive)).toThrow(
+      "ハッシュ"
+    );
+  });
+  it("rejects duplicate event scopes replacing a different reviewed event", () => {
+    const d = approved();
+    d.verification.qualityApproval.reviewedEvents[1] =
+      d.verification.qualityApproval.reviewedEvents[0];
+    expect(() => parseVoteData(d, approvedActivity, archive)).toThrow(
+      "ハッシュ"
+    );
+  });
+  it("accepts the actual operator approval without pretending blind human extraction", () => {
+    const actual = parseVoteData(approved(), approvedActivity, archive);
+    expect(actual.verification.qualityApproval).toMatchObject({
+      policy: "three-stage-v1",
+      approver: "久米歩",
+      date: "2026-11-26",
+      blindHumanExtraction: false,
+      matched: 198,
+      mismatches: 0,
+      held: 0,
+      baselineCommit: "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+    });
+    expect(
+      approvedActivity.sources.every(
+        (s) => s.review.operatorReview === "approved"
+      )
+    ).toBe(true);
+    expect(getVoteReviewLabel(actual.verification)).toContain(
+      "本人目視最終承認済み"
+    );
+    expect(getVoteReviewLabel(actual.verification)).not.toContain(
+      "人による独立"
+    );
+  });
+  it("rejects approved flags without the actual-method approval record", () => {
+    const d = approved() as Omit<
+      ReturnType<typeof approved>,
+      "verification"
+    > & {
+      verification: Omit<typeof verification, "qualityApproval"> & {
+        qualityApproval?: typeof verification.qualityApproval;
+      };
+    };
+    delete d.verification.qualityApproval;
+    expect(() => parseVoteData(d, approvedActivity, archive)).toThrow(
+      "三段階承認"
+    );
+  });
+  it("rejects calling the visual comparison blind independent extraction", () => {
+    const d = approved();
+    (
+      d.verification.qualityApproval as { blindHumanExtraction: boolean }
+    ).blindHumanExtraction = true;
+    expect(() => parseVoteData(d, approvedActivity, archive)).toThrow();
+  });
+  it("does not accept flags when post-correction independent evidence is missing", () => {
+    const d = approved();
+    d.verification.independentAiComparison.postCorrectionStatus = "pending";
+    expect(() => parseVoteData(d, approvedActivity, archive)).toThrow(
+      "三段階承認"
+    );
+  });
+});
+
+it("represents accepted independent AI evidence without inventing human sign-off", () => {
+  const a = parseActivityData({ members, sources, snapshots, coverage });
+  const d = parseVoteData(
+    { ...fixture(), verification: structuredClone(verification) },
+    a,
+    archive
+  );
+  a.coverage.voteIndependentReview = "pending";
+  d.verification.operatorReview = "pending";
+  const approval = d.verification.qualityApproval;
+  if (!approval) throw Error("missing scope");
+  delete approval.reviewedEvents;
+  delete approval.evidenceSha256;
+  delete approval.approver;
+  delete approval.date;
+  delete approval.humanMethod;
+  delete approval.blindHumanExtraction;
+  delete approval.matched;
+  delete approval.mismatches;
+  delete approval.held;
+  const accepted = parseVoteData(d, a, archive);
+  expect(getVoteReviewLabel(accepted.verification)).toBe(
+    "別AI独立照合受入済み・本人目視最終承認待ち"
+  );
+  d.verification.operatorReview = "approved";
+  a.coverage.voteIndependentReview = "approved";
+  expect(() => parseVoteData(d, a, archive)).toThrow("本人目視最終承認の記録");
+});
+it("rejects independent acceptance without an acceptance record", () => {
+  const a = parseActivityData({ members, sources, snapshots, coverage });
+  const d = parseVoteData(
+    { ...fixture(), verification: structuredClone(verification) },
+    a,
+    archive
+  );
+  const approval = d.verification.qualityApproval;
+  if (!approval) throw Error("missing scope");
+  delete approval.independentAcceptance;
+  expect(() => parseVoteData(d, a, archive)).toThrow("別AI受入承認の記録");
+});
+
+it("rejects final approval dated before independent acceptance but accepts the same date", () => {
+  const a = parseActivityData({ members, sources, snapshots, coverage });
+  const d = parseVoteData(
+    { ...fixture(), verification: structuredClone(verification) },
+    a,
+    archive
+  );
+  const approval = d.verification.qualityApproval;
+  if (!approval?.independentAcceptance) throw Error("missing acceptance");
+  expect(() => parseVoteData(d, a, archive)).not.toThrow();
+  approval.date = "2026-11-25";
+  expect(() => parseVoteData(d, a, archive)).toThrow("承認順序の日付");
+});
+
+it.each([
+  "ai",
+  "human",
+] as const)("does not carry the other stage forward when only %s approval is refreshed", (renewed) => {
+  const a = parseActivityData({ members, sources, snapshots, coverage });
+  const d = parseVoteData(
+    { ...fixture(), verification: structuredClone(verification) },
+    a,
+    archive
+  );
+  const vote = d.votes[0],
+    evidence = d.cellEvidence.find(
+      (c) => c.memberId === vote.memberId && c.eventId === vote.eventId
+    );
+  if (!evidence) throw Error("missing evidence");
+  vote.choice = "no";
+  vote.observedMark = "×";
+  evidence.textMark = "×";
+  evidence.imageMark = "×";
+  d.verification.independentAiComparison.postCorrection = {
+    cells: 198,
+    matched: 198,
+    mismatches: 0,
+    basis: "synthetic revised independent comparison",
+  };
+  const approval = d.verification.qualityApproval;
+  if (!approval?.independentAcceptance) throw Error("missing stage records");
+  const record = renewed === "ai" ? approval.independentAcceptance : approval;
+  record.reviewedEvents = getReviewedEventDigests(d, a, archive);
+  record.evidenceSha256 = getReviewEvidenceDigest(d.verification);
+  expect(approval.date).toBe(approval.independentAcceptance.date);
+  expect(() => parseVoteData(d, a, archive)).toThrow(
+    renewed === "ai" ? "本人承認対象データ" : "別AI承認対象データ"
+  );
+});
+
+it("rejects independent acceptance dated before the correction it covers", () => {
+  const a = parseActivityData({ members, sources, snapshots, coverage });
+  const d = parseVoteData(
+    { ...fixture(), verification: structuredClone(verification) },
+    a,
+    archive
+  );
+  const acceptance = d.verification.qualityApproval?.independentAcceptance;
+  if (!acceptance) throw Error("missing acceptance");
+  acceptance.date = "2026-11-25";
+  expect(() => parseVoteData(d, a, archive)).toThrow("訂正日より前");
 });

@@ -10,9 +10,9 @@
       "氏名列に直接対応させた原表画像再照合（同一Codex）"
     ]
   },
-  "independentReview": "pending",
-  "operatorReview": "pending",
-  "note": "旧198一致・不一致0の誤報告は撤回し履歴を保持。2セル訂正後、別ChatGPTの独立再照合198一致・不一致0が運営者から報告された。人による最終確認と公開承認は未完了。",
+  "independentReview": "approved",
+  "operatorReview": "approved",
+  "note": "旧198一致・不一致0の誤報告は撤回し履歴を保持。別AIの独立再照合198一致・本人目視最終確認198一致を三段階方式として2026-11-26に運営者が受入承認。人による盲検独立抽出ではない。デプロイ・一般公開は別承認。",
   "checkedAt": "2026-11-26T03:40:20.072Z",
   "independentAiComparison": {
     "status": "completed_reported",
@@ -118,5 +118,102 @@
         }
       ]
     }
-  ]
+  ],
+  "qualityApproval": {
+    "policy": "three-stage-v1",
+    "approver": "久米歩",
+    "date": "2026-11-26",
+    "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+    "independentReviewMeaning": "別AI独立再照合結果の受入承認",
+    "humanMethod": "公式原表と実装データの目視比較",
+    "blindHumanExtraction": false,
+    "cells": 198,
+    "matched": 198,
+    "mismatches": 0,
+    "held": 0,
+    "digestVersion": "event-facts-v1",
+    "reviewedEvents": [
+      {
+        "eventId": "vote-msh-2026-5-sho-5",
+        "sha256": "24fef21e219d86ca8eafd35ca8fdf9ef51385c8dea251948baa312abd5920e9e"
+      },
+      {
+        "eventId": "vote-msh-2026-9-gi-54",
+        "sha256": "085e7c6b393a70ab58da821c3910b524687c5ad8263700f194f84c0f38573040"
+      },
+      {
+        "eventId": "vote-msh-2026-9-gi-62",
+        "sha256": "c340ae74edd814642cfd1342fd99714e3da075a90918bf62477ddc23bae83048"
+      },
+      {
+        "eventId": "vote-msh-2026-9-gi-63",
+        "sha256": "bb7959bde6a566e5b5184c65f0b1e167a3484509e8328e55705182b686a331c1"
+      },
+      {
+        "eventId": "vote-msh-2026-9-nin-1",
+        "sha256": "e308f4ab9506a2d49314c692e2c7ededf22319c38829d3e2932112f546076c6a"
+      },
+      {
+        "eventId": "vote-msh-2026-9-nin-2",
+        "sha256": "518cbb43d93bbb911cb9845f78de1d4803b02d22e3dc4e85bc78917de41146c1"
+      },
+      {
+        "eventId": "vote-msh-2026-9-nin-3",
+        "sha256": "71eced42e0cc223a7b5bfa3f578c09a54f181dde1a1834eb841bdd3405aadfa8"
+      },
+      {
+        "eventId": "vote-msh-2026-9-nin-4",
+        "sha256": "6b6fe0d779f1d6c81b9f8f711054acc82ef5b0b630e944e5b1a87856fe62ec8c"
+      },
+      {
+        "eventId": "vote-msh-2026-9-nin-8",
+        "sha256": "0180f4459bd680f8acaa12f385c041890f07ee7e7211a00653e8c294458b577a"
+      }
+    ],
+    "evidenceSha256": "05062a93bb897d6bef24051ea3468f0c35a02ec75d50c1f42bbb0fdeb5112b05",
+    "independentAcceptance": {
+      "approver": "久米歩",
+      "date": "2026-11-26",
+      "method": "別AIによる公式資料のみからの独立抽出・全件照合",
+      "reviewedEvents": [
+        {
+          "eventId": "vote-msh-2026-5-sho-5",
+          "sha256": "24fef21e219d86ca8eafd35ca8fdf9ef51385c8dea251948baa312abd5920e9e"
+        },
+        {
+          "eventId": "vote-msh-2026-9-gi-54",
+          "sha256": "085e7c6b393a70ab58da821c3910b524687c5ad8263700f194f84c0f38573040"
+        },
+        {
+          "eventId": "vote-msh-2026-9-gi-62",
+          "sha256": "c340ae74edd814642cfd1342fd99714e3da075a90918bf62477ddc23bae83048"
+        },
+        {
+          "eventId": "vote-msh-2026-9-gi-63",
+          "sha256": "bb7959bde6a566e5b5184c65f0b1e167a3484509e8328e55705182b686a331c1"
+        },
+        {
+          "eventId": "vote-msh-2026-9-nin-1",
+          "sha256": "e308f4ab9506a2d49314c692e2c7ededf22319c38829d3e2932112f546076c6a"
+        },
+        {
+          "eventId": "vote-msh-2026-9-nin-2",
+          "sha256": "518cbb43d93bbb911cb9845f78de1d4803b02d22e3dc4e85bc78917de41146c1"
+        },
+        {
+          "eventId": "vote-msh-2026-9-nin-3",
+          "sha256": "71eced42e0cc223a7b5bfa3f578c09a54f181dde1a1834eb841bdd3405aadfa8"
+        },
+        {
+          "eventId": "vote-msh-2026-9-nin-4",
+          "sha256": "6b6fe0d779f1d6c81b9f8f711054acc82ef5b0b630e944e5b1a87856fe62ec8c"
+        },
+        {
+          "eventId": "vote-msh-2026-9-nin-8",
+          "sha256": "0180f4459bd680f8acaa12f385c041890f07ee7e7211a00653e8c294458b577a"
+        }
+      ],
+      "evidenceSha256": "05062a93bb897d6bef24051ea3468f0c35a02ec75d50c1f42bbb0fdeb5112b05"
+    }
+  }
 }

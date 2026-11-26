@@ -21,6 +21,32 @@ export function VoteSource({ sourceId }: { sourceId: string }) {
     </div>
   );
 }
+export function NovemberResultNote() {
+  const notice = getCouncilActivity().sources.find(
+    (source) => source.id === "nov-bills"
+  )?.notice;
+  if (!notice) return null;
+  return (
+    <p
+      data-source-notice="nov-bills"
+      className="text-sm text-mirai-text-secondary"
+    >
+      {notice.asOf}の確認記録：{notice.context}
+      追加調査では
+      <a
+        href={notice.reportUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="underline"
+      >
+        公式概要報告
+      </a>
+      に{notice.decisionDate}の{notice.passed}件可決・{notice.consented}
+      件同意を確認しました。
+      {notice.limitations}
+    </p>
+  );
+}
 export function VoteCoverage({ data }: { data: VoteData }) {
   const coverage = getVoteCoverage(data);
   return (
@@ -30,9 +56,11 @@ export function VoteCoverage({ data }: { data: VoteData }) {
       </p>
       <p>
         個人表あり{coverage.recorded}議案・{data.votes.length}セル／全
-        {coverage.total}議案。個人票未掲載{coverage.unreported}議案、結果未掲載
+        {coverage.total}議案。個人票未掲載{coverage.unreported}
+        議案、結果データ未反映
         {coverage.resultUnreported}
-        議案です。未採決とは断定しません。結果確認日：{coverage.firstCheck}
+        議案です。未採決とは断定しません。収録データの確認日：
+        {coverage.firstCheck}
         {coverage.lastCheck !== coverage.firstCheck
           ? `〜${coverage.lastCheck}`
           : ""}
@@ -55,6 +83,16 @@ export function VoteCoverage({ data }: { data: VoteData }) {
       <p>
         会派は採決資料の見出しに基づく当時の情報です。全会一致や会派態度から個人票を推定せず、順位・スコアを付けません。
       </p>
+      {data.verification.operatorReview === "approved" &&
+        data.verification.qualityApproval && (
+          <p>
+            三段階方式：Codex抽出・技術検証／別AI独立再照合／本人目視最終承認。
+            承認者：{data.verification.qualityApproval.approver}、承認日：
+            {data.verification.qualityApproval.date}。
+            本人確認は公式原表と実装データの目視比較であり、盲検独立抽出ではありません。
+          </p>
+        )}
+      <NovemberResultNote />
     </aside>
   );
 }

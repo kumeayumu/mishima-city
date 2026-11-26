@@ -2,6 +2,24 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const base = process.env.PUBLIC_TEST_BASE_URL || "http://127.0.0.1:3002";
+
+const currentVoteReview = JSON.parse(
+  fs.readFileSync(
+    "web/src/features/council-activity/server/data/2026/vote-verifications.json",
+    "utf8"
+  )
+);
+function expectedVoteReviewLabel() {
+  if (
+    currentVoteReview.independentReview === "approved" &&
+    currentVoteReview.operatorReview === "approved"
+  )
+    return "別AI独立照合受入・本人目視最終承認済み";
+  if (currentVoteReview.independentReview === "approved")
+    return "別AI独立照合受入済み・本人目視最終承認待ち";
+  return "機械・画像照合値・別AI照合受入／本人目視最終承認待ち";
+}
+
 const index = JSON.parse(
   fs.readFileSync(
     "web/src/features/official-records/server/data/2026/minutes-index.json",
@@ -124,7 +142,7 @@ test("bill search restores combined URL conditions and official source links", a
     const list = doc.getElementById("official-bills").parentElement;
     assert.equal(list.querySelectorAll("li").length, 1);
     assert.match(list.textContent, /議第68号/);
-    assert.match(list.textContent, /議決結果は公式資料に未掲載/);
+    assert.match(list.textContent, /議決結果は保存済み議案一覧に未掲載/);
     assert.ok(
       list.querySelector(
         'a[href="https://www.city.mishima.shizuoka.jp/uploaded/attachment/17869.pdf"]'
@@ -233,7 +251,7 @@ test("voting pages preserve real cells, unknown coverage and every official bill
     assert.equal(response.status, 200, ref.id);
     const html = await response.text();
     assert.ok(html.includes(ref.number));
-    assert.ok(html.includes("独立二次照合"));
+    assert.ok(html.includes(expectedVoteReviewLabel()));
     assert.ok(html.includes("www.city.mishima.shizuoka.jp"));
     if (ref.availability === "result_unreported")
       assert.ok(html.includes("議決結果の掲載確認日："));
@@ -415,9 +433,9 @@ test("AI recheck completion is reported separately from human approval", async (
   const expected =
     verification.independentReview === "approved"
       ? verification.operatorReview === "approved"
-        ? "独立二次照合・運営者校閲済み"
-        : "独立二次照合済み・運営者校閲待ち"
-      : "人による独立二次照合待ち";
+        ? "別AI独立照合受入・本人目視最終承認済み"
+        : "別AI独立照合受入済み・本人目視最終承認待ち"
+      : "別AI照合受入／本人目視最終承認待ち";
   assert.ok(doc.body.textContent.includes(expected));
   assert.ok(!doc.body.textContent.includes("訂正後の別AI再比較は未完了"));
 });
@@ -461,4 +479,58 @@ test("unknown faction does not replace unpublished vote/result markers", async (
     ).length,
     396
   );
+});
+
+test("November source notes preserve saved results and the actual review method", async () => {
+  const { JSDOM } = require("../../web/node_modules/jsdom");
+  const sources = JSON.parse(
+    fs.readFileSync(
+      "web/src/features/council-activity/server/data/sources.json",
+      "utf8"
+    )
+  );
+  const notice = sources.find((source) => source.id === "nov-bills")?.notice;
+  for (const path of ["/", "/votes", "/bills/msh-2026-11-gi-68"]) {
+    const response = await fetch(base + path);
+    assert.equal(response.status, 200);
+    const doc = new JSDOM(await response.text()).window.document,
+      node = doc.querySelector('[data-source-notice="nov-bills"]');
+    if (notice) {
+      assert.ok(node);
+      for (const fact of [
+        notice.asOf,
+        notice.context,
+        notice.decisionDate,
+        notice.limitations,
+      ])
+        assert.ok(node.textContent.includes(fact));
+      assert.ok(
+        node.textContent.includes(
+          `${notice.passed}件可決・${notice.consented}件同意`
+        )
+      );
+      assert.ok(
+        Array.from(node.querySelectorAll("a")).some(
+          (a) => a.href === notice.reportUrl
+        )
+      );
+    } else assert.equal(node, null);
+    if (path !== "/") {
+      assert.ok(doc.body.textContent.includes(expectedVoteReviewLabel()));
+      if (currentVoteReview.operatorReview === "approved")
+        assert.match(doc.body.textContent, /盲検独立抽出ではありません/);
+      assert.doesNotMatch(doc.body.textContent, /人による独立二次照合待ち/);
+    }
+  }
+});
+
+test("member directory reports the validated vote review state", async () => {
+  const { JSDOM } = require("../../web/node_modules/jsdom");
+  const response = await fetch(`${base}/members`);
+  assert.equal(response.status, 200);
+  const doc = new JSDOM(await response.text()).window.document;
+  const notice = doc.querySelector('[aria-label="掲載範囲と確認状況"]');
+  assert.ok(notice);
+  assert.ok(notice.textContent.includes(expectedVoteReviewLabel()));
+  assert.doesNotMatch(notice.textContent, /人による独立二次照合済み/);
 });

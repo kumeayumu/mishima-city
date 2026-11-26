@@ -45,7 +45,7 @@ export function VoteMatrixScroll({ children }: { children: ReactNode }) {
         <p id="matrix-legend" className="text-xs leading-relaxed">
           <strong className="vote-symbol-strong">○</strong>賛成／
           <strong className="vote-symbol-strong">×</strong>
-          反対／会派?：当時会派未確認／欠：欠席／退：退席／棄：棄権／除：除斥／議：議長不参加／?：不明／未：個人票未掲載／結：議決結果未掲載／外：条件外
+          反対／会派?：当時会派未確認／欠：欠席／退：退席／棄：棄権／除：除斥／議：議長不参加／?：不明／未：個人票未掲載／結：結果データ未反映／外：条件外
         </p>
         <p className="text-xs text-mirai-text-secondary">
           議案番号は詳細へ。「議案名」で全文を表示。上のバーでも横スクロールできます。

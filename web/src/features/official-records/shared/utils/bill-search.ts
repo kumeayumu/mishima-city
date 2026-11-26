@@ -10,7 +10,7 @@ export const billResultOptions = [
   { value: "同意", label: "同意" },
   { value: "一部採択", label: "一部採択" },
   { value: "承認", label: "承認" },
-  { value: "unpublished", label: "公式資料に未掲載" },
+  { value: "unpublished", label: "結果データ未反映" },
 ] as const;
 
 export function normalizeBillSearchText(value: string): string {

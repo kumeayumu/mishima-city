@@ -331,7 +331,7 @@ export function VoteListView({
                   </Link>
                 </h2>
                 <p className="text-sm">
-                  公式結果：{b.result || "資料未掲載"}
+                  公式結果：{b.result || "保存済み議案一覧に未掲載"}
                   {b.decisionDate ? `／${b.decisionDate}` : ""}
                 </p>
                 {filters.faction && !e && (

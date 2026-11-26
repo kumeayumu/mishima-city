@@ -9,11 +9,135 @@
     "special-20260515"
   ],
   "reviewStatus": "source_checked",
-  "operatorReview": "pending",
+  "operatorReview": "approved",
   "activities": {
     "votes": "partial",
     "questionsAndAnswers": "not_collected"
   },
   "expectedMembers": 22,
-  "voteIndependentReview": "pending"
+  "voteIndependentReview": "approved",
+  "operatorApproval": {
+    "approver": "久米歩",
+    "date": "2026-11-26",
+    "baselineCommit": "86167cc7540370a8d1e30c66b35ffc9ef09b9149",
+    "digestVersion": "activity-facts-v1",
+    "reviewedData": [
+      {
+        "scopeId": "committee:operations-20260520",
+        "sha256": "6ef279acb68bf8e3f72ec0d21b0ac85109e73619bbe3aff8a0bff1e75f45f895"
+      },
+      {
+        "scopeId": "committee:special-20260515",
+        "sha256": "35e50d493f7a6ecd96e82d59dd1b48d2366a9ce3d9ad6c6426b8d13d6e6fc51d"
+      },
+      {
+        "scopeId": "committee:standing-20260515",
+        "sha256": "be0fd705d822db7eccf30facd05d230c0b6e5ea15a9eb594952e6e63aec0d079"
+      },
+      {
+        "scopeId": "coverage-selection",
+        "sha256": "9381d1ccbc928796949bc49b2b9284e28041e70299d559afbe105f321c826b73"
+      },
+      {
+        "scopeId": "faction:factions-20260520",
+        "sha256": "ff72044ae5704f05aeaed09ce6d0aa55c38506097a7184a15979147925a641e7"
+      },
+      {
+        "scopeId": "member:msh-01153f33-4634-405f-9c54-0b2112a2856d",
+        "sha256": "27210ab4edbac4bdb6fac0039a55a083f151b9ccdea9b023f3b31331735464ff"
+      },
+      {
+        "scopeId": "member:msh-03d3bf7c-ceef-471c-bfd0-6570a06ebfaa",
+        "sha256": "4f4f4c0b71dc887386668e1d43477c8e9a2f78e6f70a0fa1848ef54ca62443b3"
+      },
+      {
+        "scopeId": "member:msh-189514fa-e34a-4787-bd24-59a11a199910",
+        "sha256": "07c6e81c3fad8d2365445f4f097e4e57a1a616f6f7efb09d4ec9217ac1e066f5"
+      },
+      {
+        "scopeId": "member:msh-1adb92ed-f26c-4099-85d9-3da164b6b666",
+        "sha256": "84b622bd76b3d0a0270ae6f1eed2b868b18fec2958b91e155bafa2c7c413c5f4"
+      },
+      {
+        "scopeId": "member:msh-1f39e961-18d9-4929-b1f7-58fdfa8421b1",
+        "sha256": "55d428b2db6575d7e157d0fd122f099597043776b0dd907521f9827906c5591e"
+      },
+      {
+        "scopeId": "member:msh-3f680df3-7800-4605-9ed2-20b73376b573",
+        "sha256": "8ffe133f2a8c5e06e7bb6c62777313e8144bf5d4dc651e8e059e5534e6522c3e"
+      },
+      {
+        "scopeId": "member:msh-43b1f880-fc1b-4922-b873-649bb75b92d1",
+        "sha256": "ed9887b47fc2382d88a0905ee818ea9f4cf110a67d515d814a3f1915f8fb66b8"
+      },
+      {
+        "scopeId": "member:msh-48698fae-2e20-4222-92f1-3a7a715c5b1e",
+        "sha256": "843ba5ed86fb75b31df8298c34c6d8b37fa8efa2e48d9271ac451e6b1a8776f8"
+      },
+      {
+        "scopeId": "member:msh-4ac6176d-03d7-4dc7-b5ba-71780448e8e9",
+        "sha256": "a6d6d52f08743e034c7ac9c03040e7aee8d25f152da2e20b25dd9fd2360eed27"
+      },
+      {
+        "scopeId": "member:msh-6c18e85d-c6ec-4c11-9cb3-51efa76a50b8",
+        "sha256": "70eae6bec54278f1968e6855d1984fcd18abdb6ba11d83ccbc167b0dd351f55b"
+      },
+      {
+        "scopeId": "member:msh-6c932e82-089b-4a98-b93f-42948dca6f94",
+        "sha256": "9786bd00c16667bcf114e06187738204fc152930445424be9ebe70b3906c6118"
+      },
+      {
+        "scopeId": "member:msh-753e6512-f5e4-4eb0-93ef-4ea904dacd5f",
+        "sha256": "ebd3a5208a4be707adecec25b63c8c27a5988170cc6d75d0639d2f5893b2faac"
+      },
+      {
+        "scopeId": "member:msh-75cc3b34-816e-469e-857d-2295f255c0be",
+        "sha256": "74f841bfc5535926ae64ac37c2b34f4ac09082f396beda5ed2c6c465551f6b64"
+      },
+      {
+        "scopeId": "member:msh-83e236b4-1d8b-4aa1-a006-0e7d10162ba3",
+        "sha256": "183b98eb70daf973d0abcd9061b5d211f756b6a2acc90418023c962227b3b6e6"
+      },
+      {
+        "scopeId": "member:msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+        "sha256": "82994ae7644ced72e45c6e362c041be62706b20532f1b30cd342561197ced69c"
+      },
+      {
+        "scopeId": "member:msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+        "sha256": "91ed3c9ea02549ad5333c12f5b37c90adb9708ca0d0a3459e35881744e33613f"
+      },
+      {
+        "scopeId": "member:msh-9fe952f1-7d95-4e08-8711-0086bfb1c8b3",
+        "sha256": "c59247f5328e9b7b60873a6b3e404fc25128f1c813408713e1385cf35fc3ff08"
+      },
+      {
+        "scopeId": "member:msh-a80162a2-c807-4ed8-b994-3e0030d9a5f2",
+        "sha256": "52b1bb4ec2d59ffaa725bdad70fb1a69e135139c1abf46ab9af229210e26f48c"
+      },
+      {
+        "scopeId": "member:msh-ade6f2d0-d5a3-48a3-8be2-5134d24e3f35",
+        "sha256": "f22129935a6d74d94d22d035f9368b2eaaed29e29be4384708c642bd576d9c3e"
+      },
+      {
+        "scopeId": "member:msh-af6cccb3-eafb-4390-aadd-4f676a8a1a4d",
+        "sha256": "29867847070eecb8120a1666b59c571d76a8c81fa149bbb640a2566f96a5befc"
+      },
+      {
+        "scopeId": "member:msh-e1594967-34b5-4443-9cdb-ba7346ff59e7",
+        "sha256": "5a14f45c0da7a613cbda895fb4b21301e42b91ebec4bb4da551bf39a6ac8a870"
+      },
+      {
+        "scopeId": "member:msh-f606cc8a-d26f-4aa1-a190-0b7bfc89f578",
+        "sha256": "9d517989eb5fce73c79233ded5017fbd53c8cbea1744e0234622a6896cda9de3"
+      },
+      {
+        "scopeId": "roster:roster-20260515",
+        "sha256": "adecce490ba49b5204a9f48642ce50fca598b49277f1484d61db5ad5fbe8a4ac"
+      },
+      {
+        "scopeId": "term:term-ending-20270430",
+        "sha256": "7f27b58698206bda464bcb2c8b330e366b6b5143d1a8381b5250d63443ec954f"
+      }
+    ]
+  }
 }

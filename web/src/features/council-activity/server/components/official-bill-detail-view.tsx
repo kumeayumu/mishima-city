@@ -19,7 +19,7 @@ export function getBillMetadata(id: string): Metadata {
   return {
     title: `${b?.number ?? "議案"}｜みらい議会@三島市（非公式）`,
     description:
-      "公式資料に基づく議案と個人別賛否。テスト公開中・独立確認待ち。",
+      "公式資料に基づく議案と個人別賛否。テスト公開中。確認方法と出典を掲載。",
   };
 }
 export function OfficialBillDetailView({ billId }: { billId: string }) {
@@ -40,7 +40,7 @@ export function OfficialBillDetailView({ billId }: { billId: string }) {
           {b.number} {b.bill.title}
         </h1>
         <p>
-          公式結果：{b.result || "公式資料に未掲載"}
+          公式結果：{b.result || "保存済み議案一覧に未掲載"}
           {b.decisionDate ? `（${b.decisionDate}）` : ""}
         </p>
         {b.latest && (
@@ -128,7 +128,7 @@ export function OfficialBillDetailView({ billId }: { billId: string }) {
         ) : (
           <p className="text-sm">
             {b.availability === "result_unreported"
-              ? "議決日・結果は最新確認時も公式資料に未掲載です。個人別賛否も未確認です。"
+              ? "議決日・結果は保存済み議案一覧の確認時点で未掲載です。個人別賛否も未確認です。"
               : "全会一致の記載があっても個人票は推定しません。この議案の個人別賛否は資料未掲載です。"}
           </p>
         )}
