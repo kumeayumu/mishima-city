@@ -51,6 +51,7 @@ export function BillShareButtonsClient({
         <Button
           variant="outline"
           onClick={handleReport}
+          disabled={!siteConfig.externalLinks.report}
           className="rounded-full px-6 py-3 h-auto font-bold text-base bg-white text-gray-800 hover:bg-gray-50 border-gray-800"
         >
           <Image

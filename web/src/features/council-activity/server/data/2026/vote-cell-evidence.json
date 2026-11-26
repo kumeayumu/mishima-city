@@ -1,0 +1,1784 @@
+[
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-4ac6176d-03d7-4dc7-b5ba-71780448e8e9",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 1,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-48698fae-2e20-4222-92f1-3a7a715c5b1e",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 2,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-753e6512-f5e4-4eb0-93ef-4ea904dacd5f",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 3,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-1f39e961-18d9-4929-b1f7-58fdfa8421b1",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 4,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-03d3bf7c-ceef-471c-bfd0-6570a06ebfaa",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 5,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-e1594967-34b5-4443-9cdb-ba7346ff59e7",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 6,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-83e236b4-1d8b-4aa1-a006-0e7d10162ba3",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 7,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-189514fa-e34a-4787-bd24-59a11a199910",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 8,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-43b1f880-fc1b-4922-b873-649bb75b92d1",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 9,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-a80162a2-c807-4ed8-b994-3e0030d9a5f2",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 10,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 11,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 12,
+    "textMark": null,
+    "imageMark": "斜線"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-75cc3b34-816e-469e-857d-2295f255c0be",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 13,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-af6cccb3-eafb-4390-aadd-4f676a8a1a4d",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 14,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-9fe952f1-7d95-4e08-8711-0086bfb1c8b3",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 15,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-6c932e82-089b-4a98-b93f-42948dca6f94",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 16,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-3f680df3-7800-4605-9ed2-20b73376b573",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 17,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-6c18e85d-c6ec-4c11-9cb3-51efa76a50b8",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 18,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-f606cc8a-d26f-4aa1-a190-0b7bfc89f578",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 19,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-1adb92ed-f26c-4099-85d9-3da164b6b666",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 20,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-ade6f2d0-d5a3-48a3-8be2-5134d24e3f35",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 21,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-5-sho-5",
+    "memberId": "msh-01153f33-4634-405f-9c54-0b2112a2856d",
+    "sourceId": "may-votes",
+    "row": 1,
+    "column": 22,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-4ac6176d-03d7-4dc7-b5ba-71780448e8e9",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 1,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-48698fae-2e20-4222-92f1-3a7a715c5b1e",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 2,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-f606cc8a-d26f-4aa1-a190-0b7bfc89f578",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 3,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-753e6512-f5e4-4eb0-93ef-4ea904dacd5f",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 4,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-1f39e961-18d9-4929-b1f7-58fdfa8421b1",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 5,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-03d3bf7c-ceef-471c-bfd0-6570a06ebfaa",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 6,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-e1594967-34b5-4443-9cdb-ba7346ff59e7",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 7,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-83e236b4-1d8b-4aa1-a006-0e7d10162ba3",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 8,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-189514fa-e34a-4787-bd24-59a11a199910",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 9,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-43b1f880-fc1b-4922-b873-649bb75b92d1",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 10,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-a80162a2-c807-4ed8-b994-3e0030d9a5f2",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 11,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 12,
+    "textMark": null,
+    "imageMark": "斜線"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 13,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-75cc3b34-816e-469e-857d-2295f255c0be",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 14,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-af6cccb3-eafb-4390-aadd-4f676a8a1a4d",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 15,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-9fe952f1-7d95-4e08-8711-0086bfb1c8b3",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 16,
+    "textMark": "退",
+    "imageMark": "退"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-6c932e82-089b-4a98-b93f-42948dca6f94",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 17,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-3f680df3-7800-4605-9ed2-20b73376b573",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 18,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-6c18e85d-c6ec-4c11-9cb3-51efa76a50b8",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 19,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-1adb92ed-f26c-4099-85d9-3da164b6b666",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 20,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-ade6f2d0-d5a3-48a3-8be2-5134d24e3f35",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 21,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-1",
+    "memberId": "msh-01153f33-4634-405f-9c54-0b2112a2856d",
+    "sourceId": "sep-votes",
+    "row": 1,
+    "column": 22,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-4ac6176d-03d7-4dc7-b5ba-71780448e8e9",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 1,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-48698fae-2e20-4222-92f1-3a7a715c5b1e",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 2,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-f606cc8a-d26f-4aa1-a190-0b7bfc89f578",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 3,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-753e6512-f5e4-4eb0-93ef-4ea904dacd5f",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 4,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-1f39e961-18d9-4929-b1f7-58fdfa8421b1",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 5,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-03d3bf7c-ceef-471c-bfd0-6570a06ebfaa",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 6,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-e1594967-34b5-4443-9cdb-ba7346ff59e7",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 7,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-83e236b4-1d8b-4aa1-a006-0e7d10162ba3",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 8,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-189514fa-e34a-4787-bd24-59a11a199910",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 9,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-43b1f880-fc1b-4922-b873-649bb75b92d1",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 10,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-a80162a2-c807-4ed8-b994-3e0030d9a5f2",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 11,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 12,
+    "textMark": null,
+    "imageMark": "斜線"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 13,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-75cc3b34-816e-469e-857d-2295f255c0be",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 14,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-af6cccb3-eafb-4390-aadd-4f676a8a1a4d",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 15,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-9fe952f1-7d95-4e08-8711-0086bfb1c8b3",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 16,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-6c932e82-089b-4a98-b93f-42948dca6f94",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 17,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-3f680df3-7800-4605-9ed2-20b73376b573",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 18,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-6c18e85d-c6ec-4c11-9cb3-51efa76a50b8",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 19,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-1adb92ed-f26c-4099-85d9-3da164b6b666",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 20,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-ade6f2d0-d5a3-48a3-8be2-5134d24e3f35",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 21,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-2",
+    "memberId": "msh-01153f33-4634-405f-9c54-0b2112a2856d",
+    "sourceId": "sep-votes",
+    "row": 2,
+    "column": 22,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-4ac6176d-03d7-4dc7-b5ba-71780448e8e9",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 1,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-48698fae-2e20-4222-92f1-3a7a715c5b1e",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 2,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-f606cc8a-d26f-4aa1-a190-0b7bfc89f578",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 3,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-753e6512-f5e4-4eb0-93ef-4ea904dacd5f",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 4,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-1f39e961-18d9-4929-b1f7-58fdfa8421b1",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 5,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-03d3bf7c-ceef-471c-bfd0-6570a06ebfaa",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 6,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-e1594967-34b5-4443-9cdb-ba7346ff59e7",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 7,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-83e236b4-1d8b-4aa1-a006-0e7d10162ba3",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 8,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-189514fa-e34a-4787-bd24-59a11a199910",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 9,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-43b1f880-fc1b-4922-b873-649bb75b92d1",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 10,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-a80162a2-c807-4ed8-b994-3e0030d9a5f2",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 11,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 12,
+    "textMark": null,
+    "imageMark": "斜線"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 13,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-75cc3b34-816e-469e-857d-2295f255c0be",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 14,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-af6cccb3-eafb-4390-aadd-4f676a8a1a4d",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 15,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-9fe952f1-7d95-4e08-8711-0086bfb1c8b3",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 16,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-6c932e82-089b-4a98-b93f-42948dca6f94",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 17,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-3f680df3-7800-4605-9ed2-20b73376b573",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 18,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-6c18e85d-c6ec-4c11-9cb3-51efa76a50b8",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 19,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-1adb92ed-f26c-4099-85d9-3da164b6b666",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 20,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-ade6f2d0-d5a3-48a3-8be2-5134d24e3f35",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 21,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-3",
+    "memberId": "msh-01153f33-4634-405f-9c54-0b2112a2856d",
+    "sourceId": "sep-votes",
+    "row": 3,
+    "column": 22,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-4ac6176d-03d7-4dc7-b5ba-71780448e8e9",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 1,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-48698fae-2e20-4222-92f1-3a7a715c5b1e",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 2,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-f606cc8a-d26f-4aa1-a190-0b7bfc89f578",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 3,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-753e6512-f5e4-4eb0-93ef-4ea904dacd5f",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 4,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-1f39e961-18d9-4929-b1f7-58fdfa8421b1",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 5,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-03d3bf7c-ceef-471c-bfd0-6570a06ebfaa",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 6,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-e1594967-34b5-4443-9cdb-ba7346ff59e7",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 7,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-83e236b4-1d8b-4aa1-a006-0e7d10162ba3",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 8,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-189514fa-e34a-4787-bd24-59a11a199910",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 9,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-43b1f880-fc1b-4922-b873-649bb75b92d1",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 10,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-a80162a2-c807-4ed8-b994-3e0030d9a5f2",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 11,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 12,
+    "textMark": null,
+    "imageMark": "斜線"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 13,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-75cc3b34-816e-469e-857d-2295f255c0be",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 14,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-af6cccb3-eafb-4390-aadd-4f676a8a1a4d",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 15,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-9fe952f1-7d95-4e08-8711-0086bfb1c8b3",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 16,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-6c932e82-089b-4a98-b93f-42948dca6f94",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 17,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-3f680df3-7800-4605-9ed2-20b73376b573",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 18,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-6c18e85d-c6ec-4c11-9cb3-51efa76a50b8",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 19,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-1adb92ed-f26c-4099-85d9-3da164b6b666",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 20,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-ade6f2d0-d5a3-48a3-8be2-5134d24e3f35",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 21,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-4",
+    "memberId": "msh-01153f33-4634-405f-9c54-0b2112a2856d",
+    "sourceId": "sep-votes",
+    "row": 4,
+    "column": 22,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-4ac6176d-03d7-4dc7-b5ba-71780448e8e9",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 1,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-48698fae-2e20-4222-92f1-3a7a715c5b1e",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 2,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-f606cc8a-d26f-4aa1-a190-0b7bfc89f578",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 3,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-753e6512-f5e4-4eb0-93ef-4ea904dacd5f",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 4,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-1f39e961-18d9-4929-b1f7-58fdfa8421b1",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 5,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-03d3bf7c-ceef-471c-bfd0-6570a06ebfaa",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 6,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-e1594967-34b5-4443-9cdb-ba7346ff59e7",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 7,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-83e236b4-1d8b-4aa1-a006-0e7d10162ba3",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 8,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-189514fa-e34a-4787-bd24-59a11a199910",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 9,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-43b1f880-fc1b-4922-b873-649bb75b92d1",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 10,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-a80162a2-c807-4ed8-b994-3e0030d9a5f2",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 11,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 12,
+    "textMark": null,
+    "imageMark": "斜線"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 13,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-75cc3b34-816e-469e-857d-2295f255c0be",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 14,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-af6cccb3-eafb-4390-aadd-4f676a8a1a4d",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 15,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-9fe952f1-7d95-4e08-8711-0086bfb1c8b3",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 16,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-6c932e82-089b-4a98-b93f-42948dca6f94",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 17,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-3f680df3-7800-4605-9ed2-20b73376b573",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 18,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-6c18e85d-c6ec-4c11-9cb3-51efa76a50b8",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 19,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-1adb92ed-f26c-4099-85d9-3da164b6b666",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 20,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-ade6f2d0-d5a3-48a3-8be2-5134d24e3f35",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 21,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-nin-8",
+    "memberId": "msh-01153f33-4634-405f-9c54-0b2112a2856d",
+    "sourceId": "sep-votes",
+    "row": 5,
+    "column": 22,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-4ac6176d-03d7-4dc7-b5ba-71780448e8e9",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 1,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-48698fae-2e20-4222-92f1-3a7a715c5b1e",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 2,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-f606cc8a-d26f-4aa1-a190-0b7bfc89f578",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 3,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-753e6512-f5e4-4eb0-93ef-4ea904dacd5f",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 4,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-1f39e961-18d9-4929-b1f7-58fdfa8421b1",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 5,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-03d3bf7c-ceef-471c-bfd0-6570a06ebfaa",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 6,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-e1594967-34b5-4443-9cdb-ba7346ff59e7",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 7,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-83e236b4-1d8b-4aa1-a006-0e7d10162ba3",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 8,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-189514fa-e34a-4787-bd24-59a11a199910",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 9,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-43b1f880-fc1b-4922-b873-649bb75b92d1",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 10,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-a80162a2-c807-4ed8-b994-3e0030d9a5f2",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 11,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 12,
+    "textMark": null,
+    "imageMark": "斜線"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 13,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-75cc3b34-816e-469e-857d-2295f255c0be",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 14,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-af6cccb3-eafb-4390-aadd-4f676a8a1a4d",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 15,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-9fe952f1-7d95-4e08-8711-0086bfb1c8b3",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 16,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-6c932e82-089b-4a98-b93f-42948dca6f94",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 17,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-3f680df3-7800-4605-9ed2-20b73376b573",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 18,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-6c18e85d-c6ec-4c11-9cb3-51efa76a50b8",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 19,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-1adb92ed-f26c-4099-85d9-3da164b6b666",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 20,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-ade6f2d0-d5a3-48a3-8be2-5134d24e3f35",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 21,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-54",
+    "memberId": "msh-01153f33-4634-405f-9c54-0b2112a2856d",
+    "sourceId": "sep-votes",
+    "row": 6,
+    "column": 22,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-4ac6176d-03d7-4dc7-b5ba-71780448e8e9",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 1,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-48698fae-2e20-4222-92f1-3a7a715c5b1e",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 2,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-f606cc8a-d26f-4aa1-a190-0b7bfc89f578",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 3,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-753e6512-f5e4-4eb0-93ef-4ea904dacd5f",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 4,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-1f39e961-18d9-4929-b1f7-58fdfa8421b1",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 5,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-03d3bf7c-ceef-471c-bfd0-6570a06ebfaa",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 6,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-e1594967-34b5-4443-9cdb-ba7346ff59e7",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 7,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-83e236b4-1d8b-4aa1-a006-0e7d10162ba3",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 8,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-189514fa-e34a-4787-bd24-59a11a199910",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 9,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-43b1f880-fc1b-4922-b873-649bb75b92d1",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 10,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-a80162a2-c807-4ed8-b994-3e0030d9a5f2",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 11,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 12,
+    "textMark": null,
+    "imageMark": "斜線"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 13,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-75cc3b34-816e-469e-857d-2295f255c0be",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 14,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-af6cccb3-eafb-4390-aadd-4f676a8a1a4d",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 15,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-9fe952f1-7d95-4e08-8711-0086bfb1c8b3",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 16,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-6c932e82-089b-4a98-b93f-42948dca6f94",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 17,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-3f680df3-7800-4605-9ed2-20b73376b573",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 18,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-6c18e85d-c6ec-4c11-9cb3-51efa76a50b8",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 19,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-1adb92ed-f26c-4099-85d9-3da164b6b666",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 20,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-ade6f2d0-d5a3-48a3-8be2-5134d24e3f35",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 21,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-62",
+    "memberId": "msh-01153f33-4634-405f-9c54-0b2112a2856d",
+    "sourceId": "sep-votes",
+    "row": 7,
+    "column": 22,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-4ac6176d-03d7-4dc7-b5ba-71780448e8e9",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 1,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-48698fae-2e20-4222-92f1-3a7a715c5b1e",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 2,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-f606cc8a-d26f-4aa1-a190-0b7bfc89f578",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 3,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-753e6512-f5e4-4eb0-93ef-4ea904dacd5f",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 4,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-1f39e961-18d9-4929-b1f7-58fdfa8421b1",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 5,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-03d3bf7c-ceef-471c-bfd0-6570a06ebfaa",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 6,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-e1594967-34b5-4443-9cdb-ba7346ff59e7",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 7,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-83e236b4-1d8b-4aa1-a006-0e7d10162ba3",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 8,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-189514fa-e34a-4787-bd24-59a11a199910",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 9,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-43b1f880-fc1b-4922-b873-649bb75b92d1",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 10,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-a80162a2-c807-4ed8-b994-3e0030d9a5f2",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 11,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 12,
+    "textMark": null,
+    "imageMark": "斜線"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 13,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-75cc3b34-816e-469e-857d-2295f255c0be",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 14,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-af6cccb3-eafb-4390-aadd-4f676a8a1a4d",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 15,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-9fe952f1-7d95-4e08-8711-0086bfb1c8b3",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 16,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-6c932e82-089b-4a98-b93f-42948dca6f94",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 17,
+    "textMark": "〇",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-3f680df3-7800-4605-9ed2-20b73376b573",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 18,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-6c18e85d-c6ec-4c11-9cb3-51efa76a50b8",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 19,
+    "textMark": "×",
+    "imageMark": "×"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-1adb92ed-f26c-4099-85d9-3da164b6b666",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 20,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-ade6f2d0-d5a3-48a3-8be2-5134d24e3f35",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 21,
+    "textMark": "○",
+    "imageMark": "○"
+  },
+  {
+    "eventId": "vote-msh-2026-9-gi-63",
+    "memberId": "msh-01153f33-4634-405f-9c54-0b2112a2856d",
+    "sourceId": "sep-votes",
+    "row": 8,
+    "column": 22,
+    "textMark": "〇",
+    "imageMark": "○"
+  }
+]

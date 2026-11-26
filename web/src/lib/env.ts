@@ -1,17 +1,9 @@
+import { resolveWebUrl } from "./utils/resolve-web-url";
+
 /**
  * 環境変数の設定
  * アプリケーション全体で使用する環境変数を一元管理
  */
-
-if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
-  throw new Error("環境変数 NEXT_PUBLIC_SUPABASE_URL が設定されていません");
-}
-
-if (!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-  throw new Error(
-    "環境変数 NEXT_PUBLIC_SUPABASE_ANON_KEY が設定されていません"
-  );
-}
 
 const chatDailyCostLimitUsdRaw = process.env.CHAT_DAILY_COST_LIMIT_USD || "0.5";
 
@@ -24,10 +16,24 @@ if (Number.isNaN(chatDailyCostLimitUsd) || chatDailyCostLimitUsd <= 0) {
 }
 
 export const env = {
-  webUrl: process.env.NEXT_PUBLIC_WEB_URL || "http://localhost:3000",
+  webUrl: resolveWebUrl({
+    explicitUrl: process.env.NEXT_PUBLIC_WEB_URL,
+    vercel: process.env.VERCEL,
+    deploymentHostname: process.env.VERCEL_URL,
+  }),
   adminUrl: process.env.ADMIN_URL || "http://localhost:3001",
-  supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL,
-  supabaseAnonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+  get supabaseUrl() {
+    const value = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    if (!value)
+      throw new Error("DB機能には NEXT_PUBLIC_SUPABASE_URL が必要です");
+    return value;
+  },
+  get supabaseAnonKey() {
+    const value = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    if (!value)
+      throw new Error("DB機能には NEXT_PUBLIC_SUPABASE_ANON_KEY が必要です");
+    return value;
+  },
   revalidateSecret: process.env.REVALIDATE_SECRET,
   analytics: {
     gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID,

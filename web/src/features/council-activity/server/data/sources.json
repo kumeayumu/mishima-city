@@ -1,0 +1,178 @@
+[
+  {
+    "id": "roster",
+    "title": "議員名簿（議席番号順）",
+    "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/14980.pdf",
+    "asOf": "2026-05-15",
+    "locator": "PDF 1ページ",
+    "retrievedAt": "2026-11-24T07:01:55.365Z",
+    "sha256": "230721d63460be7516cb5cf4d8576743961dd6d22c6703caa603e42a5931d5ec",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-24T07:01:55.365Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
+  },
+  {
+    "id": "roster-page",
+    "title": "公式の議員名簿・紹介（共通ページ）",
+    "url": "https://www.city.mishima.shizuoka.jp/site/gikai/4585.html",
+    "asOf": null,
+    "locator": "議席番号順（一覧）へのリンク",
+    "retrievedAt": "2026-11-24T07:01:55.547Z",
+    "sha256": "0a75ad98879ac924fe288de111dde0efd128c852c22c7b23eb44a57176d685b9",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-24T07:01:55.547Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
+  },
+  {
+    "id": "factions",
+    "title": "会派別議員名簿",
+    "url": "https://www.city.mishima.shizuoka.jp/site/gikai/4630.html",
+    "asOf": "2026-05-20",
+    "locator": "会派名・所属議員の表",
+    "retrievedAt": "2026-11-24T07:01:55.921Z",
+    "sha256": "a783f65db18c4f77484c47c99bf87cf570931538cfe747fe19b683d01a372a30",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-24T07:01:55.921Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
+  },
+  {
+    "id": "standing",
+    "title": "常任委員会委員名簿",
+    "url": "https://www.city.mishima.shizuoka.jp/site/gikai/22457.html",
+    "asOf": "2026-05-15",
+    "locator": "委員会名・役職・委員の表",
+    "retrievedAt": "2026-11-24T07:01:56.088Z",
+    "sha256": "72562ccd15698aed6a730de03761e28332fd705458d2231aafaf6d5568785e6e",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-24T07:01:56.088Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
+  },
+  {
+    "id": "operations",
+    "title": "議会運営委員会委員名簿",
+    "url": "https://www.city.mishima.shizuoka.jp/site/gikai/4629.html",
+    "asOf": "2026-05-20",
+    "locator": "委員長・副委員長・委員の表",
+    "retrievedAt": "2026-11-24T07:01:56.246Z",
+    "sha256": "f2bfd2c5db9cc99a1192b1852745dfe92aba62b4d8f92678a77dd8788f760cbf",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-24T07:01:56.246Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
+  },
+  {
+    "id": "special",
+    "title": "新庁舎整備等検討特別委員会委員名簿",
+    "url": "https://www.city.mishima.shizuoka.jp/site/gikai/30630.html",
+    "asOf": "2026-05-15",
+    "locator": "委員長・副委員長・委員の表",
+    "retrievedAt": "2026-11-24T07:01:56.385Z",
+    "sha256": "72ce26341e03e94d1e55b6537442140f8d74f7b0f7107d9be605200d6a3a9850",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-24T07:01:56.385Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
+  },
+  {
+    "id": "terms",
+    "title": "静岡県・市町長及び議会議員の任期",
+    "url": "https://www.pref.shizuoka.jp/kensei/senkyo/senkan/1032132.html",
+    "asOf": null,
+    "locator": "三島市の議会議員・任期満了欄",
+    "retrievedAt": "2026-11-24T07:01:56.595Z",
+    "sha256": "e23f749c55dcb18d40e3b7394e81722ca0834d18fc711464b153e404ea736300",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-24T07:01:56.595Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
+  },
+  {
+    "id": "may-votes",
+    "title": "市議会だより2026年8月1日号・個人別賛否",
+    "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16292.pdf",
+    "asOf": "2026-05-15",
+    "locator": "PDF1枚目・印刷6頁",
+    "retrievedAt": "2026-11-25T11:11:12.156Z",
+    "sha256": "e1a8e4071a4c97bc0952103dbf09e4a2c2e8f2f58e2fb0130df14e1b940ea56e",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-25T11:11:12.156Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと採決の事実情報のみ。全文・写真は配布しない。独立二次照合と運営者校閲は未完了。"
+  },
+  {
+    "id": "sep-votes",
+    "title": "市議会だより2026年11月1日号・個人別賛否",
+    "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17617.pdf",
+    "asOf": null,
+    "locator": "PDF1枚目・印刷7頁",
+    "retrievedAt": "2026-11-25T11:11:21.966Z",
+    "sha256": "5bf0062a0e16a31b204c6392a5847a2bf3c6b4a1ac1e87367ffd55d22ca307b0",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-25T11:11:21.966Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと採決の事実情報のみ。全文・写真は配布しない。独立二次照合と運営者校閲は未完了。"
+  },
+  {
+    "id": "nov-bills",
+    "title": "2026年11月定例会提出議案・最新結果確認",
+    "url": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+    "asOf": null,
+    "locator": "議第68～85号・議決日と結果欄",
+    "retrievedAt": "2026-11-25T11:11:22.341Z",
+    "sha256": "c5cf2549738f789fe4a5f52bfb7bd43e0fd318355f4632c191f0e06c157d4bef",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-25T11:11:22.341Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと採決の事実情報のみ。全文・写真は配布しない。独立二次照合と運営者校閲は未完了。"
+  },
+  {
+    "id": "may-minutes",
+    "title": "2026年5月15日臨時会・承第5号採決と議長交代",
+    "url": "https://ssp.kaigiroku.net/tenant/mishima/SpMinuteView.html?council_id=452&schedule_id=1&tenant_id=406",
+    "asOf": "2026-05-15",
+    "locator": "発言64・65：承第5号採決／85：議長辞職許可／99・101：岡田氏当選・議長席着席",
+    "retrievedAt": "2026-11-26T03:00:24.842Z",
+    "sha256": "4f2177d0c14265682046d00fcd672baa4ddbf3e3c30ac1ea52d1f9c7a303009a",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-26T03:00:24.842Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンク・採決時の議事進行順序のみ。SHA-256は公式minutes/get_minuteのJSONP応答のバイト列。会議録本文は追加保存・配布しない。"
+  }
+]

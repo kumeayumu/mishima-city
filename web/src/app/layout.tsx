@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Lexend_Giga, Noto_Sans_JP } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
-import { siteConfig } from "@/config/site.config";
 import type { ReactNode } from "react";
+import { siteConfig } from "@/config/site.config";
 import { env } from "@/lib/env";
 
 const notoSansJP = Noto_Sans_JP({
@@ -18,48 +18,36 @@ const lexendGiga = Lexend_Giga({
   weight: ["400", "500", "700", "800", "900"],
 });
 
-const ogImage = {
-  url: "/ogp.jpg",
-  width: 1200,
-  height: 630,
-  alt: `${siteConfig.siteName}のOGPイメージ`,
-};
-
 export const metadata: Metadata = {
   metadataBase: new URL(env.webUrl),
   title: siteConfig.siteName,
   description: siteConfig.siteDescription,
   keywords: [...siteConfig.keywords],
   icons: {
-    icon: "/icons/pwa/icon_fukuoka.svg",
-    apple: "/icons/pwa/icon_fukuoka.svg",
+    icon: "/icons/pwa/icon_mishima.svg",
+    apple: "/icons/pwa/icon_mishima.svg",
   },
   manifest: "/manifest.json",
   openGraph: {
     title: siteConfig.siteName,
     description: siteConfig.siteDescription,
-    images: [ogImage],
     siteName: siteConfig.siteName,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: siteConfig.siteName,
     description: siteConfig.siteDescription,
-    images: [ogImage.url],
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "fzIXRquRrvSqvoV072nopGQ-wiWv8dSpJSwPwIMAQvs",
   },
 };
 

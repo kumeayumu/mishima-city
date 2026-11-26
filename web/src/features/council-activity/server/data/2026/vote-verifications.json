@@ -1,0 +1,122 @@
+{
+  "id": "verification-20261125",
+  "cells": 198,
+  "methodComparison": {
+    "textAndImageMatched": 189,
+    "imageOnlyMatched": 9,
+    "mismatches": 0,
+    "methods": [
+      "PDF文字・座標抽出（図形の9セルは文字未取得のまま）",
+      "氏名列に直接対応させた原表画像再照合（同一Codex）"
+    ]
+  },
+  "independentReview": "pending",
+  "operatorReview": "pending",
+  "note": "旧198一致・不一致0の誤報告は撤回し履歴を保持。2セル訂正後、別ChatGPTの独立再照合198一致・不一致0が運営者から報告された。人による最終確認と公開承認は未完了。",
+  "checkedAt": "2026-11-26T03:40:20.072Z",
+  "independentAiComparison": {
+    "status": "completed_reported",
+    "cells": 198,
+    "matched": 196,
+    "mismatches": 2,
+    "basis": "運営者による別ChatGPT照合結果の報告。元の独立抽出CSV自体は未受領。",
+    "postCorrectionStatus": "completed_reported",
+    "postCorrection": {
+      "cells": 198,
+      "matched": 198,
+      "mismatches": 0,
+      "basis": "運営者報告：別ChatGPTが、事前に公式資料から独立抽出して保存したCSVと訂正版CSVをプログラム比較。賛否・参加状態・当時会派198一致、議案ID×議員ID重複0、非訂正196セル不変。独立CSV・比較プログラム自体は未受領。"
+    }
+  },
+  "correctionHistory": [
+    {
+      "date": "2026-11-26",
+      "reason": "PDF図形の斜線を11列目へ固定挿入し、画像側も同じ誤配列を用いた。正しくは堀江氏の12列目。",
+      "withdrawnVerification": {
+        "id": "verification-20261125",
+        "cells": 198,
+        "methodComparison": {
+          "textAndImageMatched": 198,
+          "mismatches": 0,
+          "methods": ["PDF文字・座標抽出", "原表画像照合（同一Codex）"]
+        },
+        "independentReview": "pending",
+        "operatorReview": "pending",
+        "note": "別担当・運営者による盲検の独立二次照合は未完了。同一Codexの別方式の一致を人による独立確認済みとは扱わない。",
+        "checkedAt": "2026-11-25T11:16:12.940Z"
+      },
+      "changes": [
+        {
+          "eventId": "vote-msh-2026-5-sho-5",
+          "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+          "before": {
+            "eventId": "vote-msh-2026-5-sho-5",
+            "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+            "choice": null,
+            "participation": "chair_not_voting",
+            "observedMark": "斜線",
+            "sourceId": "may-votes",
+            "locator": {
+              "pdfPage": 1,
+              "printedPage": "6",
+              "row": 1,
+              "column": 11
+            },
+            "verificationId": "verification-20261125"
+          },
+          "after": {
+            "eventId": "vote-msh-2026-5-sho-5",
+            "memberId": "msh-9c4f751d-9ffa-4169-85c8-a2b5eb6657a4",
+            "choice": "yes",
+            "participation": "voted",
+            "observedMark": "○",
+            "sourceId": "may-votes",
+            "locator": {
+              "pdfPage": 1,
+              "printedPage": "6",
+              "row": 1,
+              "column": 11
+            },
+            "verificationId": "verification-20261125"
+          },
+          "sourceIds": ["may-votes", "may-minutes"]
+        },
+        {
+          "eventId": "vote-msh-2026-5-sho-5",
+          "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+          "before": {
+            "eventId": "vote-msh-2026-5-sho-5",
+            "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+            "choice": "yes",
+            "participation": "voted",
+            "observedMark": "○",
+            "sourceId": "may-votes",
+            "locator": {
+              "pdfPage": 1,
+              "printedPage": "6",
+              "row": 1,
+              "column": 12
+            },
+            "verificationId": "verification-20261125"
+          },
+          "after": {
+            "eventId": "vote-msh-2026-5-sho-5",
+            "memberId": "msh-9a91fd31-771d-499b-a653-61a08a4fb7b8",
+            "choice": null,
+            "participation": "chair_not_voting",
+            "observedMark": "斜線",
+            "sourceId": "may-votes",
+            "locator": {
+              "pdfPage": 1,
+              "printedPage": "6",
+              "row": 1,
+              "column": 12
+            },
+            "verificationId": "verification-20261125"
+          },
+          "sourceIds": ["may-votes", "may-minutes"]
+        }
+      ]
+    }
+  ]
+}

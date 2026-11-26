@@ -429,3 +429,9 @@ html.large-text main .text-base {
 .progress-fill {
   width: var(--progress-width, 0%);
 }
+
+/* Strengthen the vote glyphs without depending on color or hover. */
+.vote-symbol-strong {
+  -webkit-text-stroke: 0.6px currentColor;
+  font-weight: 900;
+}

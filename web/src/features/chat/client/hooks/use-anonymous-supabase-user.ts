@@ -3,9 +3,6 @@
 import { createBrowserClient } from "@mirai-gikai/supabase";
 import { useEffect, useState } from "react";
 
-// Create a singleton Supabase client with persistent session
-const supabase = createBrowserClient();
-
 /**
  * Hook to ensure an anonymous Supabase user exists and return the user ID
  * This will automatically create an anonymous user if none exists
@@ -16,6 +13,7 @@ export function useAnonymousSupabaseUser() {
   useEffect(() => {
     const ensureAnonUser = async () => {
       try {
+        const supabase = createBrowserClient();
         // Check if user already exists
         const {
           data: { user },

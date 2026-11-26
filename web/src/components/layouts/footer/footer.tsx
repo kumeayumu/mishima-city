@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { siteConfig } from "@/config/site.config";
 import { usePathname } from "next/navigation";
+import { siteConfig } from "@/config/site.config";
 import { isInterviewPage } from "@/lib/page-layout-utils";
 import { policyLinks, primaryLinks } from "./footer.config";
 
@@ -21,6 +21,12 @@ export function Footer() {
         <FooterPrimaryLinks />
         <FooterPolicies />
         <FooterDisclaimer />
+        <p className="text-xs">
+          運営者：{siteConfig.operator.name} ／{" "}
+          <a href={siteConfig.operator.contactUrl} className="underline">
+            kume@soma-wood.jp
+          </a>
+        </p>
         {siteConfig.features.showTeamMiraiSection && <FooterCopyright />}
       </div>
     </footer>
@@ -94,7 +100,7 @@ function FooterPolicies() {
 function FooterDisclaimer() {
   return (
     <p className="text-[11px] text-slate-500 text-center mt-1 mb-3">
-      このサービスは政党チームみらいが運営しているものではありません
+      テスト公開中。このサイトは三島市・三島市議会およびチームみらいの公式サイトではありません。
     </p>
   );
 }

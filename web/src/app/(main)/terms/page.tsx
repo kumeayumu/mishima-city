@@ -1,100 +1,80 @@
 import type { Metadata } from "next";
+import { Container } from "@/components/layouts/container";
 import {
-  LegalList,
   LegalPageLayout,
   LegalParagraph,
   LegalSectionTitle,
 } from "@/components/layouts/legal-page-layout";
-import { Container } from "@/components/layouts/container";
 import { siteConfig } from "@/config/site.config";
 
 export const metadata: Metadata = {
   title: `利用規約 | ${siteConfig.siteName}`,
-  description: `${siteConfig.siteName}の利用規約`,
 };
-
 export default function TermsPage() {
   return (
     <LegalPageLayout
       title="利用規約"
-      description={`${siteConfig.siteName}をご利用いただくにあたっての基本的なルールを定めています。`}
+      description="非公式・テスト公開版の利用条件"
       className="pt-24 md:pt-12"
     >
-      <Container className="space-y-10">
-        <LegalParagraph>
-          {siteConfig.siteName}
-          （以下「本サービス」といいます。）をご利用いただく場合、以下の規約に同意いただいたものとみなします。
-        </LegalParagraph>
-
-        <section className="space-y-4">
-          <LegalSectionTitle>第1条（禁止事項）</LegalSectionTitle>
+      <Container className="space-y-8">
+        <section className="space-y-3">
+          <LegalSectionTitle>1. 運営と公開範囲</LegalSectionTitle>
           <LegalParagraph>
-            本サービスのユーザー（以下「ユーザー」といいます。）は以下の行為を行ってはなりません。
-          </LegalParagraph>
-          <LegalList
-            items={[
-              "法令または公序良俗に反する行為",
-              "本サービスの運営を妨げる行為",
-              "本サービスの情報を改ざん・加工し、誤解を招く形で利用する行為",
-              `${siteConfig.operator.name}（以下「当団体」といいます。）または第三者の権利・利益を侵害する行為`,
-              "サーバへの過剰な負荷、システムへの妨害・改ざん・侵入行為",
-              "自動化ツール、ボット等による操作",
-              "本サービスの提供するAIチャット機能に個人情報を入力する行為",
-              "その他、当団体が不適切と判断する一切の行為",
-            ]}
-          />
-
-          <div className="space-y-3">
-            <LegalParagraph>
-              特に、ユーザーは、本サービスの提供するAIチャット機能を不正に利用してはならず、以下の行為を行ってはなりません。
-            </LegalParagraph>
-            <LegalList
-              items={[
-                "システムプロンプトその他の内部設定を改変、削除、またはこれを推測しようとする行為",
-                `AIに対して「${siteConfig.siteName}」や市議会議案等の関連テーマ以外の応答を生成させようとする行為`,
-                "プロンプトインジェクション等、AIモデルを意図的に誤動作させる行為",
-                "当団体が設けた利用制限、レートリミット、安全制御、規制回避ポリシー、フィルタリング機能、ログ取得・監視機構を不正に回避または無効化しようとする行為",
-                "出力させた応答を、あたかもユーザー自身が執筆したかのように偽装して表明する行為",
-                "出力内容を利用して、法令違反、詐欺、誹謗中傷、わいせつ、差別、暴力助長等の有害行為を行うこと",
-              ]}
-            />
-          </div>
-        </section>
-
-        <section className="space-y-4">
-          <LegalSectionTitle>第2条（知的財産権）</LegalSectionTitle>
-          <LegalParagraph>
-            本サービスの提供のために用いられるプログラム及びその他データ等のコンテンツ、及び本サービスに掲載されるテキスト、画像、データ等の権利は、当団体または当団体が利用許諾を受けた正当な権利者に帰属します。ユーザーは私的利用の範囲を超えて使用してはなりません。
+            本サイトは{siteConfig.operator.name}
+            が運営するテスト公開中の非公式サイトです。三島市・三島市議会およびチームみらいが運営・承認する公式サービスではありません。2026年度の取得済み議案情報と公式資料・会議録へのリンクを案内しています。AIチャット、投稿、会員登録は提供していません。
           </LegalParagraph>
         </section>
-
-        <section className="space-y-4">
-          <LegalSectionTitle>第3条（情報に係る不保証）</LegalSectionTitle>
+        <section className="space-y-3">
+          <LegalSectionTitle>2. 出典と情報の確認</LegalSectionTitle>
           <LegalParagraph>
-            当団体は、本サービスによって提供される情報について、正確性、最新性、完全性、有用性、目的適合性、安全性、合法性、真実性等いかなる事項についても保証しません。
+            掲載内容の正確性・完全性・最新性は保証しません。重要な判断では各出典先の公式情報をご確認ください。外部サイトにはそれぞれの利用条件が適用されます。会議録本文は本サイトに転載していません。
           </LegalParagraph>
         </section>
-
-        <section className="space-y-4">
-          <LegalSectionTitle>第4条（サービスの変更・停止）</LegalSectionTitle>
+        <section className="space-y-3">
+          <LegalSectionTitle>3. ソフトウェアと資料の権利</LegalSectionTitle>
           <LegalParagraph>
-            当団体は、ユーザーへの事前通知なく本サービスの内容を変更・停止できるものとし、それにより生じた損害について一切の責任を負いません。
+            本サイトのソフトウェアはGNU Affero General Public License version
+            3（AGPL
+            v3）に基づいて提供します。本規約は、同ライセンスにより認められる利用・複製・改変・再配布等の権利を制限しません。
+          </LegalParagraph>
+          <LegalParagraph>
+            <a className="underline" href={siteConfig.sourceUrl}>
+              対応するソースコードとビルド手順
+            </a>{" "}
+            ／{" "}
+            <a
+              className="underline"
+              href="https://github.com/kumeayumu/mishima-city/blob/mishima-migration/LICENSE"
+            >
+              LICENSE
+            </a>
+          </LegalParagraph>
+          <LegalParagraph>
+            出典先の文書・データ・画像等の権利は各権利者に帰属します。ソフトウェアのAGPL
+            v3が、第三者の資料にも一律に適用されるという意味ではありません。資料の再利用は、出典先の条件と適用法令をご確認ください。
           </LegalParagraph>
         </section>
-
-        <section className="space-y-4">
-          <LegalSectionTitle>第5条（規約の変更）</LegalSectionTitle>
+        <section className="space-y-3">
+          <LegalSectionTitle>4. 利用にあたって</LegalSectionTitle>
           <LegalParagraph>
-            当団体は必要に応じて本規約を変更することができ、変更後にユーザーが本サービスを利用した場合、当該変更に同意したものとみなします。
+            不正アクセス、権利侵害、サービスを妨害する行為、過剰な負荷をかける行為、掲載情報を改ざんして公式情報と誤認させる行為は行わないでください。
           </LegalParagraph>
         </section>
-
-        <section className="space-y-4">
-          <LegalSectionTitle>第6条（準拠法・管轄）</LegalSectionTitle>
+        <section className="space-y-3">
+          <LegalSectionTitle>5. 変更・停止と免責</LegalSectionTitle>
           <LegalParagraph>
-            本規約は日本法に準拠し、本サービスに関連して生じる一切の紛争については、
-            {siteConfig.operator.jurisdiction}
-            を第一審の専属的合意管轄裁判所とします。
+            テスト公開のため、内容や提供範囲を変更・停止する場合があります。運営者は、適用法令により認められる範囲で、本サイトの利用に伴う損害について責任を負わないものとします。本規約は、法令上排除できない責任や利用者の権利を排除するものではありません。
+          </LegalParagraph>
+        </section>
+        <section className="space-y-3">
+          <LegalSectionTitle>6. 問い合わせ</LegalSectionTitle>
+          <LegalParagraph>
+            運営者：{siteConfig.operator.name} ／{" "}
+            <a className="underline" href={siteConfig.operator.contactUrl}>
+              kume@soma-wood.jp
+            </a>
+            。情報の訂正、権利・プライバシーに関するご連絡を受け付けます。本規約は必要に応じて見直し、このページでお知らせします。
           </LegalParagraph>
         </section>
       </Container>

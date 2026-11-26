@@ -9,6 +9,18 @@ allowBuilds:
   protobufjs: false
   sharp: false
   simple-git-hooks: false
-# @opentelemetry/sdk-node 0.206 系は api <1.10.0 を要求するため固定
+# OpenTelemetry API 1系を維持。推移依存の既知脆弱性は修正版へ固定。
 overrides:
   '@opentelemetry/api': 1.9.0
+  sharp: 0.35.5
+  postcss: 8.5.33
+  protobufjs: 7.6.6
+  '@grpc/grpc-js': 1.14.7
+  prismjs: 1.30.0
+  ws: 8.23.0
+  katex: 0.19.1
+  'postcss-selector-parser@6': 6.1.6
+  'vite@7': 7.3.8
+  'rollup@4': ^4.59.0
+  'picomatch@2': 2.3.2
+  'yaml@2': 2.9.1
