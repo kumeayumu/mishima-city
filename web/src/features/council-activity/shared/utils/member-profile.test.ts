@@ -96,7 +96,7 @@ describe("member profiles and filters", () => {
     );
     expect(akiyama?.term?.startsOn).toBeNull();
     expect(akiyama?.term?.scheduledEnd).toBe("2027-04-30");
-    expect(data.coverage.activities.votes).toBe("not_collected");
+    expect(data.coverage.activities.votes).toBe("partial");
   });
   it("keeps IDs when names or seats change", () => {
     const changed = structuredClone(data);

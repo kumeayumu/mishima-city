@@ -14,6 +14,7 @@ import { TextSizeToggle } from "@/lib/text-size";
 const NAV_LINKS = [
   { href: "/", label: "トップページ" },
   { href: "/members", label: "議員から探す" },
+  { href: "/votes", label: "議員別の議案賛否" },
   { href: "/#official-bills", label: "2026年度の議案・議決結果" },
   { href: "/#official-minutes", label: "2026年度の会議録" },
 ] as const;

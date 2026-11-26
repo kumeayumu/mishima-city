@@ -6,6 +6,7 @@ import { Container } from "@/components/layouts/container";
 import { getMemberProfiles } from "../../shared/utils/member-profile";
 import { getCouncilActivity } from "../repositories/council-activity-repository";
 import { CoverageNotice } from "./coverage-notice";
+import { MemberVoteHistory } from "./member-vote-history";
 import { SourceReference } from "./source-reference";
 
 export function getStaticMemberParams() {
@@ -134,18 +135,7 @@ export function MemberDetailView({ memberId }: { memberId: string }) {
           </p>
         ))}
       </section>
-      <section
-        aria-labelledby="member-votes"
-        className="space-y-2 rounded-2xl border border-mirai-border p-5"
-      >
-        <h2 id="member-votes" className="text-xl font-bold text-mirai-text">
-          議案賛否
-        </h2>
-        <p className="font-bold text-mirai-text">データ整備中</p>
-        <p className="text-sm text-mirai-text-secondary">
-          個人別の採決データはまだ取り込んでいません。全会一致や所属会派から個人の賛否を推定せず、公式資料で確認した履歴を今後追加します。
-        </p>
-      </section>
+      <MemberVoteHistory memberId={memberId} />
       <section
         aria-labelledby="member-questions"
         className="space-y-2 rounded-2xl border border-mirai-border p-5"

@@ -19,9 +19,14 @@ const source = z
       const url = new URL(value);
       return (
         url.protocol === "https:" &&
-        ["www.city.mishima.shizuoka.jp", "www.pref.shizuoka.jp"].includes(
+        (["www.city.mishima.shizuoka.jp", "www.pref.shizuoka.jp"].includes(
           url.hostname
-        )
+        ) ||
+          (url.hostname === "ssp.kaigiroku.net" &&
+            url.pathname === "/tenant/mishima/SpMinuteView.html" &&
+            url.searchParams.get("tenant_id") === "406" &&
+            /^\d+$/.test(url.searchParams.get("council_id") ?? "") &&
+            /^\d+$/.test(url.searchParams.get("schedule_id") ?? "")))
       );
     }, "公式のHTTPS出典URLが必要です"),
     asOf: date.nullable(),
@@ -141,9 +146,10 @@ export const activityDataSchema = z
         committeeSnapshotIds: z.array(id).min(1),
         reviewStatus: z.literal("source_checked"),
         operatorReview: z.enum(["pending", "approved"]),
+        voteIndependentReview: z.enum(["pending", "approved"]).optional(),
         activities: z
           .object({
-            votes: z.literal("not_collected"),
+            votes: z.enum(["not_collected", "partial"]),
             questionsAndAnswers: z.literal("not_collected"),
           })
           .strict(),

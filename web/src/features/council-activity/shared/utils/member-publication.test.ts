@@ -75,6 +75,7 @@ describe("pending member publication guard", () => {
     const copy = structuredClone(data);
     copy.coverage.operatorReview = "approved";
     for (const s of copy.sources) s.review.operatorReview = "approved";
+    copy.coverage.voteIndependentReview = "approved";
     expect(() =>
       assertMemberPublication(copy, {
         production: true,
@@ -152,6 +153,22 @@ describe("shared approval status", () => {
     copy.coverage.operatorReview = "approved";
     for (const source of copy.sources)
       source.review.operatorReview = "approved";
+    copy.coverage.voteIndependentReview = "approved";
     expect(isMemberDataApproved(copy)).toBe(true);
   });
+});
+
+it("does not publish votes before independent verification even if member sources are approved", () => {
+  const copy = structuredClone(data);
+  copy.coverage.operatorReview = "approved";
+  for (const source of copy.sources) source.review.operatorReview = "approved";
+  copy.coverage.voteIndependentReview = "pending";
+  expect(isMemberDataApproved(copy)).toBe(false);
+  expect(() =>
+    assertMemberPublication(copy, {
+      production: true,
+      hosted: true,
+      localReview: false,
+    })
+  ).toThrow();
 });

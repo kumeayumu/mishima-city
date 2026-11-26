@@ -110,5 +110,69 @@
       "operatorReview": "pending"
     },
     "usage": "公式リンクと事実情報のみ。原文・写真は配布しない。資料全体の再配布条件は未確認。"
+  },
+  {
+    "id": "may-votes",
+    "title": "市議会だより2026年8月1日号・個人別賛否",
+    "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/16292.pdf",
+    "asOf": "2026-05-15",
+    "locator": "PDF1枚目・印刷6頁",
+    "retrievedAt": "2026-11-25T11:11:12.156Z",
+    "sha256": "e1a8e4071a4c97bc0952103dbf09e4a2c2e8f2f58e2fb0130df14e1b940ea56e",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-25T11:11:12.156Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと採決の事実情報のみ。全文・写真は配布しない。独立二次照合と運営者校閲は未完了。"
+  },
+  {
+    "id": "sep-votes",
+    "title": "市議会だより2026年11月1日号・個人別賛否",
+    "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/17617.pdf",
+    "asOf": null,
+    "locator": "PDF1枚目・印刷7頁",
+    "retrievedAt": "2026-11-25T11:11:21.966Z",
+    "sha256": "5bf0062a0e16a31b204c6392a5847a2bf3c6b4a1ac1e87367ffd55d22ca307b0",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-25T11:11:21.966Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと採決の事実情報のみ。全文・写真は配布しない。独立二次照合と運営者校閲は未完了。"
+  },
+  {
+    "id": "nov-bills",
+    "title": "2026年11月定例会提出議案・最新結果確認",
+    "url": "https://www.city.mishima.shizuoka.jp/site/gikai/38814.html",
+    "asOf": null,
+    "locator": "議第68～85号・議決日と結果欄",
+    "retrievedAt": "2026-11-25T11:11:22.341Z",
+    "sha256": "c5cf2549738f789fe4a5f52bfb7bd43e0fd318355f4632c191f0e06c157d4bef",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-25T11:11:22.341Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンクと採決の事実情報のみ。全文・写真は配布しない。独立二次照合と運営者校閲は未完了。"
+  },
+  {
+    "id": "may-minutes",
+    "title": "2026年5月15日臨時会・承第5号採決と議長交代",
+    "url": "https://ssp.kaigiroku.net/tenant/mishima/SpMinuteView.html?council_id=452&schedule_id=1&tenant_id=406",
+    "asOf": "2026-05-15",
+    "locator": "発言64・65：承第5号採決／85：議長辞職許可／99・101：岡田氏当選・議長席着席",
+    "retrievedAt": "2026-11-26T03:00:24.842Z",
+    "sha256": "4f2177d0c14265682046d00fcd672baa4ddbf3e3c30ac1ea52d1f9c7a303009a",
+    "review": {
+      "status": "source_checked",
+      "reviewer": "Codex",
+      "checkedAt": "2026-11-26T03:00:24.842Z",
+      "operatorReview": "pending"
+    },
+    "usage": "公式リンク・採決時の議事進行順序のみ。SHA-256は公式minutes/get_minuteのJSONP応答のバイト列。会議録本文は追加保存・配布しない。"
   }
 ]

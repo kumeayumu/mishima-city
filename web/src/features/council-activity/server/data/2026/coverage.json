@@ -11,8 +11,9 @@
   "reviewStatus": "source_checked",
   "operatorReview": "pending",
   "activities": {
-    "votes": "not_collected",
+    "votes": "partial",
     "questionsAndAnswers": "not_collected"
   },
-  "expectedMembers": 22
+  "expectedMembers": 22,
+  "voteIndependentReview": "pending"
 }

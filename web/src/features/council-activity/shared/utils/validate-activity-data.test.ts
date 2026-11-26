@@ -40,7 +40,7 @@ describe("official member data validation", () => {
     const data = parseActivityData(fixture());
     expect(data.members).toHaveLength(22);
     expect(new Set(data.members.map((m) => m.id)).size).toBe(22);
-    expect(data.sources).toHaveLength(7);
+    expect(data.sources).toHaveLength(11);
     expect(
       data.snapshots.factions[0].groups.map((g) => g.memberIds.length)
     ).toEqual([5, 4, 3, 3, 2, 2, 3]);
@@ -181,6 +181,8 @@ describe("official member data validation", () => {
   it.each([
     "http://www.city.mishima.shizuoka.jp/",
     "https://example.com/",
+    "https://ssp.kaigiroku.net/tenant/other/SpMinuteView.html?tenant_id=406&council_id=452&schedule_id=1",
+    "https://ssp.kaigiroku.net/tenant/mishima/SpMinuteView.html?tenant_id=999&council_id=452&schedule_id=1",
   ])("rejects non-official URL %s", (url) => {
     const d = fixture();
     d.sources[0].url = url;

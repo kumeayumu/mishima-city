@@ -5,7 +5,11 @@ export function isMemberDataApproved(
 ) {
   return (
     data.coverage.operatorReview === "approved" &&
-    data.sources.every((source) => source.review.operatorReview === "approved")
+    data.sources.every(
+      (source) => source.review.operatorReview === "approved"
+    ) &&
+    (data.coverage.activities.votes !== "partial" ||
+      data.coverage.voteIndependentReview === "approved")
   );
 }
 

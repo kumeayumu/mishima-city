@@ -33,7 +33,17 @@ export function CoverageNotice({ data }: { data: ActivityData }) {
         。
       </p>
       <p>
-        議案賛否・一般質問・行政答弁の活動データは整備中です。未取得を0件として集計せず、議員の優劣を評価する順位やスコアは掲載しません。
+        {data.coverage.activities.votes === "partial" ? (
+          <>
+            議案賛否は個人表のある9議案を整備し、
+            {data.coverage.voteIndependentReview === "approved"
+              ? "独立確認済みです。"
+              : "独立確認待ちです。"}
+          </>
+        ) : (
+          "議案賛否は整備中です。"
+        )}
+        一般質問・行政答弁は整備中です。未取得を0件として集計せず、順位やスコアは掲載しません。
       </p>
     </aside>
   );

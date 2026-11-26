@@ -19,11 +19,13 @@ it("registers only archive and informational routes, without database or AI endp
   }
   expect(routes(path.resolve("src/app")).sort()).toEqual([
     "/",
+    "/bills/[billId]",
     "/faq",
     "/members",
     "/members/[memberId]",
     "/minutes/[id]",
     "/privacy",
     "/terms",
+    "/votes",
   ]);
 });

@@ -1,5 +1,7 @@
 import "server-only";
 import Link from "next/link";
+import { getCouncilVotes } from "@/features/council-activity/server/repositories/council-votes-repository";
+import { applyVoteResultsToSessions } from "@/features/council-activity/shared/utils/vote-data";
 import type { BillSearchParams } from "../../shared/types/bill-search";
 import {
   filterBillSessions,
@@ -14,11 +16,16 @@ export function OfficialRecordsView({
   searchParams?: BillSearchParams;
 }) {
   const { bills, minutes, manifest } = getOfficialRecords();
+  const voteBills = getCouncilVotes().bills;
+  const effectiveSessions = applyVoteResultsToSessions(
+    bills.sessions,
+    voteBills
+  );
   const filters = parseBillSearchFilters(
     searchParams,
     bills.sessions.map((session) => session.sourceUrl)
   );
-  const sessions = filterBillSessions(bills.sessions, filters);
+  const sessions = filterBillSessions(effectiveSessions, filters);
   const count = sessions.reduce(
     (sum, session) => sum + session.bills.length,
     0
@@ -61,6 +68,12 @@ export function OfficialRecordsView({
           議員一覧を見る
         </Link>
       </section>
+      <Link
+        href="/votes"
+        className="inline-block min-h-11 py-2 font-bold text-mirai-text underline"
+      >
+        議員別の議案賛否・マトリクスを見る
+      </Link>
       <section className="space-y-6" aria-labelledby="official-bills">
         <h2
           id="official-bills"
@@ -92,6 +105,12 @@ export function OfficialRecordsView({
                     {bill.number}
                   </p>
                   <p className="font-bold text-mirai-text">{bill.title}</p>
+                  <Link
+                    className="inline-block min-h-10 py-2 text-sm text-mirai-text underline"
+                    href={`/bills/${voteBills.find((b) => b.number === bill.number && b.sessionSourceUrl === session.sourceUrl)?.id}`}
+                  >
+                    議案詳細・個人別賛否を見る
+                  </Link>
                   <p className="text-sm text-mirai-text-secondary">
                     {bill.result || "議決結果は公式資料に未掲載"}
                     {bill.decisionDate ? `（${bill.decisionDate}）` : ""}
